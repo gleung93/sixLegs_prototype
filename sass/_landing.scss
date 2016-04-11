@@ -1,0 +1,113 @@
+.hero {
+  //position: relative;
+  background-color: $red;
+  height: 875px;
+  margin-top: -100px;
+  padding-top: 300px;
+  z-index: 1;
+  background-image: url("../images/patternFine.png");
+  background-size: cover;
+  overflow: hidden;
+  @include animation-duration(1.5s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+
+.hero h1 {
+  color: $cream;
+  text-shadow: 2px 2px rgba(0,0,0,.5);
+  max-width: 800px;
+}
+
+#pattern1 {
+  position: absolute;
+  bottom: -275px;
+  right: 200px;
+}
+
+#bugin {
+  @include animation-duration(1s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+
+.hero h4 {
+  color: $darkRed;
+  margin-bottom: 0;
+  @include animation-duration(1s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+
+.photoText .photo {
+  float: left;
+  height: 600px;
+  width: 50%;
+  background-image: url("../images/truckRenderLeft.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.photoText .photoRight {
+  float: left;
+  height: 600px;
+  width: 50%;
+  background-image: url("../images/tacos.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.photoText .text {
+  float: left;
+  width: 50%;
+  padding: 150px 80px;
+  box-sizing: border-box;
+}
+
+.photoText .text h2 {
+  color: $darkBlue;
+}
+
+.photoText .text p {
+  max-width: 525px;
+}
+
+.faq {
+  background-color: $darkBlue;
+  color: white;
+  text-align: center;
+  padding: 30px 0px;
+  background-image: url("../images/patternFineBlack.png");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.faq h2 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.faq h2:before {
+  content: '“';
+  position: absolute;
+  font-size: 87px;
+  left: -40px;
+  top: -5px;
+  color: $lightBlue;
+
+}
+
+.faq h2:after {
+  content: '”';
+  position: absolute;
+  font-size: 87px;
+  right: -25px;
+  bottom: -30px;
+  color: $lightBlue;
+
+}
+
+.faq p {
+  margin-bottom: 8px;
+}

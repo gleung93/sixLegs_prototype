@@ -1,0 +1,64 @@
+a.button {
+  position: relative;
+  background-color: rgba(191, 64, 31, 1);
+  height: auto;
+  width: auto;
+  padding: 15px;
+  font-family: museoSans;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  border-radius: 10px;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  overflow: hidden;
+  @include transition(all .2s ease-out);
+  -webkit-box-shadow:inset 0px 0px 0px 0px $red;
+}
+
+a.button:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  @include transition(all .2s ease-out);
+  @include transform(translateY(-50px));
+  background-color: white;
+}
+
+a.button:after {
+  opacity: 0;
+  content: attr(data-hover);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+  font-family: museoSans;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: $red;
+  @include transition(all .2s ease-out);
+  @include transform(translateY(-50px));
+}
+
+a.button:hover{
+  color: rgba(191, 64, 31, 1);
+  border-radius: 0px;
+}
+
+a.button:hover:before {
+  @include transform(translateY(-6px));
+}
+
+a.button:hover:after {
+  opacity: 1;
+  @include transform(translateY(-5px));
+}
+
+a.buttonNoWhite {
+  
+}

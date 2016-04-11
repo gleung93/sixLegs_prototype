@@ -1,0 +1,93 @@
+@font-face {
+    font-family: museo;
+    src: url(../fonts/Museo100-Regular.otf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museo;
+    src: url(../fonts/Museo300-Regular.otf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museo;
+    src: url(../fonts/Museo500-Regular.otf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museo;
+    src: url(../fonts/Museo700-Regular.otf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museo;
+    src: url(../fonts/Museo900-Regular.otf);
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museoSans;
+    src: url(../fonts/MuseoSans-100.otf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museoSans;
+    src: url(../fonts/MuseoSans-300.otf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museoSans;
+    src: url(../fonts/MuseoSans_500.otf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museoSans;
+    src: url(../fonts/MuseoSans_700.otf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museoSans;
+    src: url(../fonts/MuseoSans-900.otf);
+    font-weight: 900;
+    font-style: normal;
+}
+
+h1 {
+  font-family: museo, sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+}
+
+h2 {
+  font-family: museo, sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+}
+
+h4 {
+  font-family: museoSans, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+p {
+  font-family: museoSans, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}

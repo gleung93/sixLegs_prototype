@@ -1,0 +1,133 @@
+@include keyframes(fadeInRight) {
+  from {
+    opacity: 0;
+    @include transform(translate3d(100px, 0, 0));
+  }
+  to {
+    opacity: 1;
+    @include transform(translate3d(0, 0, 0));
+  }
+}
+
+.fadeInRight {
+  @include animation(fadeInRight 1.0s easeOutQuint forwards);
+}
+
+@include keyframes(fadeInLeft) {
+  from {
+    opacity: 0;
+    @include transform(translate3d(-100px, 0, 0));
+  }
+  to {
+    opacity: 1;
+    @include transform(translate3d(0, 0, 0));
+  }
+}
+
+.fadeInLeft {
+  @include animation(fadeInLeft 1.0s easeOutQuint forwards);
+}
+
+
+@include keyframes(slideInRight) {
+  from {
+    opacity: 0;
+    @include transform(translate3d(100px, 0, 0));
+  }
+  to {
+    opacity: 1;
+    @include transform(translate3d(0, 0, 0));
+  }
+}
+
+.slideInRight {
+  @include animation(slideInRight 1.0s easeOutQuint forwards);
+}
+
+//Slide In Top
+@include keyframes(slideInLeft) {
+  from {
+    opacity: 0;
+    @include transform(translate3d(-100px, 0, 0));
+  }
+  to {
+    opacity: 1;
+    @include transform(translate3d(0, 0, 0));
+  }
+}
+
+.slideInLeft {
+  @include animation(slideInLeft 1.0s easeOutQuint forwards);
+}
+
+//Slide  +scale From Top
+@include keyframes(slideScaleFromTop) {
+  from {
+    opacity: 0;
+    @include transform(scale(0.95) translate3d(0, -100px, 0));
+  }
+  to {
+    opacity: 1;
+  @include transform(scale(1.0) translate3d(0, 0, 0));
+  }
+}
+
+.slideScaleFromTop {
+  @include animation-name(slideScaleFromTop);
+}
+
+//Slide  +scale From Top
+@include keyframes(slideFromTop) {
+  from {
+    opacity: 0;
+    @include transform(translate3d(0, -100px, 0));
+  }
+  to {
+    opacity: 1;
+  @include transform(translate3d(0, 0, 0));
+  }
+}
+
+.slideFromTop {
+  @include animation-name(slideFromTop);
+}
+
+//Slide  +scale From Top Short
+@include keyframes(slideFromTopShort) {
+  from {
+    opacity: 0;
+    @include transform(translate3d(0, -50px, 0));
+  }
+  to {
+    opacity: 1;
+  @include transform(translate3d(0, 0, 0));
+  }
+}
+
+.slideFromTopShort {
+  @include animation-name(slideFromTopShort);
+}
+
+//Slide  Up
+@include keyframes(slideUp) {
+  from {
+    opacity: 0;
+    @include transform(translate3d(0, 50px, 0));
+  }
+  to {
+    opacity: 1;
+  @include transform(translate3d(0, 0, 0));
+  }
+}
+
+.slideUp {
+  @include animation-name(slideUp);
+}
+
+.delayhalf {
+  @include animation-delay(.5s);
+}
+
+.delay25 {
+  @include animation-delay(2.5s);
+}
