@@ -20,7 +20,7 @@
   margin: 33px 30px 0px 30px;
 }
 
-.navigation a {
+.navigation li a {
   display: block;
   text-decoration: none;
   color: $cream;
@@ -30,7 +30,11 @@
   text-transform: uppercase;
 }
 
-.navigation a::after {
+.navigation.navLight li a {
+  color: $red;
+}
+
+.navigation li a::after {
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -47,8 +51,12 @@
 	transform: translateY(-10px);
 }
 
-.navigation a:hover::after,
-.navigation a:focus::after {
+.navigation.navLight li a::after {
+  background: $red;
+}
+
+.navigation li a:hover::after,
+.navigation li a:focus::after {
 	height: 5px;
 	opacity: 1;
 	-webkit-transform: translateY(0px);

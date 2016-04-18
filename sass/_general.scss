@@ -3,18 +3,26 @@ a.button {
   background-color: rgba(191, 64, 31, 1);
   height: auto;
   width: auto;
-  padding: 15px;
+  padding: 15px 35px;
   font-family: museoSans;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 18px;
-  border-radius: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 6px;
   border: none;
   color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
   overflow: hidden;
   @include transition(all .2s ease-out);
   -webkit-box-shadow:inset 0px 0px 0px 0px $red;
+}
+
+a.button.ghost {
+  background-color: rgba(191, 64, 31, 0);
+  color: $cream;
+  border: 3px solid $cream;
+  -webkit-box-shadow: 0px 0px 0px $red;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.6);
 }
 
 a.button:before {
@@ -29,6 +37,10 @@ a.button:before {
   background-color: white;
 }
 
+a.button.ghost:before {
+  background-color: $cream;
+}
+
 a.button:after {
   opacity: 0;
   content: attr(data-hover);
@@ -38,11 +50,15 @@ a.button:after {
   bottom: 10px;
   font-family: museoSans;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 16px;
   color: $red;
   @include transition(all .2s ease-out);
   @include transform(translateY(-50px));
+}
+
+a.button.ghost:after {
+  bottom: 14px;
 }
 
 a.button:hover{
@@ -59,6 +75,19 @@ a.button:hover:after {
   @include transform(translateY(-5px));
 }
 
+a.button.ghost:hover:before {
+  @include transform(translateY(0));
+}
+
+a.button.ghost:hover:after {
+  opacity: 1;
+  @include transform(translateY(0));
+}
+
 a.buttonNoWhite {
-  
+
+}
+
+.hide {
+  visibility: hidden;
 }

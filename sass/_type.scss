@@ -80,7 +80,19 @@ h2 {
   font-size: 56px;
 }
 
+h3 {
+  font-family: museo, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+}
+
 h4 {
+  font-family: museoSans, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+h5 {
   font-family: museoSans, sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -90,4 +102,11 @@ p {
   font-family: museoSans, sans-serif;
   font-weight: 500;
   font-size: 18px;
+  line-height: 22px;
+}
+
+p.sub {
+  font-family: museoSans, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
 }

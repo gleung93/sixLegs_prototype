@@ -1,0 +1,85 @@
+.pageTitle.about h2 {
+  display: inline-block;
+  position: relative;
+  color: $darkBlue;
+  text-align: center;
+  padding: 0 45px;
+}
+
+.pageTitle.about {
+  padding: 200px 0;
+}
+
+.pageTitle.about h2:first-of-type {
+  padding: 0 45px 0 0;
+}
+
+.pageTitle.about h2:first-of-type:after {
+  content: "+";
+  position: absolute;
+  color: $red;
+  font-size: 30px;
+  right: -8px;
+  bottom: 14px;
+}
+
+.pageTitle.about h2:last-of-type {
+  padding: 0 0 0 45px;
+}
+
+.pageTitle.about h2:last-of-type:after {
+  content: "+";
+  position: absolute;
+  color: $red;
+  font-size: 30px;
+  left: -10px;
+  bottom: 14px;
+}
+
+.pageTitle.about p {
+  display: block;
+  margin: 60px auto 30px auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 35px;
+  color: $grey;
+  max-width: 650px;
+}
+
+.pageTitle.about p em {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.aboutStripe {
+  background-color: $darkBlue;
+  color: white;
+  padding: 40px 0px;
+  margin-bottom: 80px;
+  text-align: left;
+}
+
+.aboutStripe h4 {
+  margin: 0;
+}
+
+.aboutStripe h4.quote {
+  margin: 0;
+  color: $lightBlue;
+}
+
+.aboutStripe p {
+  max-width: 500px;
+  font-weight: 300;
+}
+
+.aboutReasons h2 {
+  max-width: 600px;
+  color: $darkBlue;
+}
+
+.aboutReasons .menuItem {
+  height: 200px;
+  text-align: left;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Six Legs Food Truck - Menu</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="sass/app.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <script src="js/jquery-2.2.1.min.js"></script>
+  <script src="js/wow.js"></script>
+
+</head>
+<body>
+
+  <!-- Navigation Light -->
+  <div class="navigation">
+    <div class="container">
+      <img class="lightLogo" src="images/lightMark.svg">
+      <ul>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="locate.html">locate</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="u-full-width pageTitle blue">
+    <div class="container">
+      <h2>Farming insects requires far fewer natural resources than traditional livestock.</h2>
+      <p>As the world population increases the livestock industry puts greater and greater strain on the earth’s natural resources. Farming insects could be the key to alleviating some of this strain.</p>
+    </div>
+  </div>
+
+  <div class="container envCompare">
+    <div class="row">
+    <h3>See how insects stack up</h3>
+    <div class="toggleBar">
+      <div class="toggleItem active" data-content="land">Land area</div>
+      <div class="toggleItem middle" data-content="feed">Feed efficency</div>
+      <div class="toggleItem" data-content="water">Water usage</div>
+    </div>
+    <div class="toggleContent">
+      <div class="active" ID="land">
+        <h4>13x less farm land</h4>
+        <p>Due to advancements in vertical farming techniques crickets can be grown inside of multistory buildings. Unlike cows which need many acres or land to graze.</p>
+        <img src="images/envLand.png">
+      </div>
+      <div ID="feed">
+        <h4>5x less feed</h4>
+        <p>Because insects are cold blooded they can more efficiently convert food to body weight. That means eating insects has an environmental impact closer to plants than animals</p>
+        <img src="images/envFeed.png">
+      </div>
+      <div ID="water">
+        <h4>1000x less water</h4>
+        <p>A cow drinks a lot of water in it’s lifetime. Because crickets reach adulthood much quicker they require far less water</p>
+        <img src="images/envWater.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <div class="u-full-width footer">
+    <div class="container">
+      <div class="six columns">
+      <p class="subtitle">KEEP UP</p>
+      <form >
+        <input type="text" name="email" value="Email Address">
+      </form>
+      <p class="sub">To subscribe to our newsletter</p>
+      <img class="social" src="images/social_icons.png">
+      </div>
+      <div class="three columns">
+        <p class="subtitle">REACH OUT</p>
+        <h5>General information</h5>
+        <div class="info">
+          <img src="images/phone.png">
+          <p>(513) 555-6530</p>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="info">
+          <img src="images/email.png">
+          <p>events@SixLegs.com</p>
+        </div>
+      </div>
+      <div class="three columns">
+        <p class="subtitle hide">REACH OUT</p>
+        <h5>Private Events</h5>
+        <div class="info">
+          <img src="images/phone.png">
+          <p>(513) 555-6530</p>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="info">
+          <img src="images/email.png">
+          <p>events@SixLegs.com</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="u-full-width copyright">
+  </div>
+
+<script>
+ $('#land').show();
+</script>
+<script src="js/app.js"></script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

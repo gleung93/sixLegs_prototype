@@ -1,5 +1,5 @@
 .hero {
-  //position: relative;
+  position: relative;
   background-color: $red;
   height: 875px;
   margin-top: -100px;
@@ -19,6 +19,20 @@
   max-width: 800px;
 }
 
+.heroPattern {
+  position: absolute;
+}
+
+#rightPattern {
+  bottom: -23%;
+  right: 10%;
+}
+
+#leftPattern {
+  bottom: 3%;
+  left: -17%;
+}
+
 #pattern1 {
   position: absolute;
   bottom: -275px;
@@ -34,6 +48,13 @@
 .hero h4 {
   color: $darkRed;
   margin-bottom: 0;
+  @include animation-duration(1s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+
+.hero .button {
+  margin-top: 30px;
   @include animation-duration(1s);
   @include animation-fill-mode(both);
   @include animation-timing-function(easeOutQuint);

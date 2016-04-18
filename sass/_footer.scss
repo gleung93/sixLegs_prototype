@@ -1,8 +1,46 @@
 .footer {
-  height: 400px;
-  background-color: white;
+  background-color: $lightGrey;
+  padding: 75px 0;
 }
 
+p.subtitle{
+  color: $darkBlue;
+  font-weight: 700;
+}
+
+p.sub {
+  color: $grey;
+}
+
+.footer form {
+  margin-bottom: 0;
+}
+
+.footer input {
+  @extend h3;
+  width: 80%;
+  color: $red;
+  background: none;
+  margin-bottom: 0;
+  border: none;
+  border-bottom: 2px solid $red;
+  height: auto;
+  padding: 0;
+  border-radius: 0;
+  @include placeholder {
+    color: $red;
+  }
+}
+
+.footer input:focus {
+  border: none;
+}
+
+.footer .info img {
+  width: 30px;
+  margin-right: 10px;
+  height: auto;
+}
 .copyright {
   height: 50px;
   background-color: black;

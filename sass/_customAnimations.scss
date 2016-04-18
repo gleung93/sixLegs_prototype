@@ -13,6 +13,19 @@
   @include animation(fadeInRight 1.0s easeOutQuint forwards);
 }
 
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeInRight {
+  @include animation(fadeInRight 1.0s easeOutQuint forwards);
+}
+
 @include keyframes(fadeInLeft) {
   from {
     opacity: 0;
@@ -122,6 +135,22 @@
 
 .slideUp {
   @include animation-name(slideUp);
+}
+
+//Slide  Down
+@include keyframes(slideDown) {
+  from {
+    opacity: 0;
+    @include transform(translate3d(0, -50px, 0));
+  }
+  to {
+    opacity: 1;
+  @include transform(translate3d(0, 0, 0));
+  }
+}
+
+.slideDown {
+  @include animation-name(slideDown);
 }
 
 .delayhalf {

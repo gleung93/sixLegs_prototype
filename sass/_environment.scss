@@ -1,0 +1,90 @@
+.pageTitle.blue {
+  background-color: $darkBlue;
+  color: white;
+  background-image: url("../images/patternFineBlack.png");
+  background-size: cover;
+}
+
+.pageTitle.blue h2 {
+  color: $cream;
+  width: 700px;
+  margin-bottom: 40px;
+}
+
+.envCompare h3 {
+  text-align: center;
+  color: $red;
+  margin-top: 90px;
+}
+
+.toggleBar {
+  width: 100%;
+  border: 5px solid $red;
+  border-radius: 6px;
+  margin: 50px 0px 70px 0px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.toggleItem {
+  position: relative;
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+  padding: 8px 0px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+  color: $red;
+  font-family: museoSans, sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  text-transform: uppercase;
+  @include transition(background-color .5s ease);
+}
+
+.toggleItem.middle:before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: $red;
+  position: absolute;
+  left: -5px;
+  top: 0;
+}
+
+.toggleItem.middle:after {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: $red;
+  position: absolute;
+  right: -5px;
+  top: 0;
+}
+
+.toggleItem.active {
+  background-color: $red;
+  color: white;
+}
+
+.toggleContent {
+  @include transition(opacity .5s ease .1s);
+  margin-bottom: 100px;
+}
+
+.toggleContent div {
+  display: none;
+}
+
+.toggleContent div h4 {
+  color: $darkBlue;
+  margin-bottom: 10px;
+  width: 550px;
+}
+
+.toggleContent div p {
+  width: 550px;
+  margin-bottom: 80px;
+}
