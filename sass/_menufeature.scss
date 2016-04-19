@@ -1,0 +1,22 @@
+.tacoIntro {
+  position: relative;
+  margin-top: 80px;
+  padding: 150px 0 300px 0;
+}
+
+#floatingTacos {
+  position: absolute;
+  left: 0;
+  width: 800px;
+}
+
+.tacoIntro .rating {
+  float: left;
+  margin-right: 15px;
+
+}
+
+.tacoIntro .numberReviews {
+  float: left;
+
+}

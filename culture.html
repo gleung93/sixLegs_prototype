@@ -15,7 +15,6 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,6 +28,9 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <script src="js/jquery-2.2.1.min.js"></script>
+  <script>
+    $('.allButNav').css('display', 'none');
+  </script>
   <script src="js/wow.js"></script>
 
 </head>
@@ -50,6 +52,7 @@
     </div>
   </div>
 
+  <div class="allButNav">
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="pageHero culture">
@@ -61,11 +64,21 @@
   </div>
 
   <div class="u-full-width discoverStripe">
-    <h4>Discover insect dishes<br>from around the world</h4>
+    <div>
+      <h3>Discover insect dishes from around the world</h3>
+      <p>Many cultures have seasonal events that bring insects in abundance.<br>They take advantage of these occasions to create some traditional<br>and heavily referred dishes</p>
+    </div>
+    <img id="blue1" src="images/pattern1blue.png">
   </div>
 
   <div class="u-full-width map">
     <div id="israel" class="marker"></div>
+    <div id="m2" class="marker"></div>
+    <div id="m3" class="marker"></div>
+    <div id="m4" class="marker"></div>
+    <div id="m5" class="marker"></div>
+    <div id="m6" class="marker"></div>
+    <div id="m7" class="marker"></div>
     <img src="images/world_map.svg">
     <div class="modal">
       <div class="left">
@@ -80,6 +93,53 @@
     </div>
   </div>
   <div class="overlay"></div>
+
+  <div style="position: relative">
+  <div class="container alreadyEat">
+    <div class="row heading">
+      <div class="eight columns">
+        <h5>PSST!</h5>
+        <h2>You already eat them.</h2>
+        <p>It is impossible to remove 100% of the contaminents in processed food. That’s why the FDA allows for certain amounts of insect fragments to be present in out food. Check out the acceptable amounts in these common foods.</p>
+      </div>
+    </div>
+    <h4>Insect fragments allowed per 100 grams</h4>
+    <div class="row ">
+      <div class="three columns item">
+        <img src="images/chocolate.png">
+        <p class="sub">chocolate</p>
+        <h2>60</h2>
+      </div>
+      <div class="three columns item">
+        <img src="images/flour.png">
+        <p class="sub">flour</p>
+        <h2>75</h2>
+      </div>
+      <div class="three columns item">
+        <img src="images/peanut.png">
+        <p class="sub">peanut butter</p>
+        <h2>30</h2>
+      </div>
+      <div class="three columns item">
+        <img src="images/mushrooms.png">
+        <p class="sub">mushrooms</p>
+        <h2>20</h2>
+      </div>
+    </div>
+  </div>
+  <img id="fragments" src="images/fragments2.jpg">
+  </div>
+
+  <div class="u-full-width natural">
+    <img id="cave" src="images/cave.jpg">
+    <div class="container">
+      <div class="seven columns u-pull-right">
+        <h2>Insects are part of<br>a natural diet</h2>
+        <P>Insects have been a part of the human diet for the entirety of human evoultion. It was only recently that they have been removed from our diet. Evidence has been by anaylzing coprolites from caves in the US and Mexico that early people ate ants, beattle larve and mites.</p>
+        <div class="photoCaption">Caves in the Ozark Mountains<BR> where the discovery was made</div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <div class="u-full-width footer">
@@ -123,6 +183,7 @@
   </div>
   <div class="u-full-width copyright">
   </div>
+</div>
 
 
 <script src="js/app.js"></script>

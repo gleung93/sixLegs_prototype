@@ -15,7 +15,6 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,6 +28,9 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <script src="js/jquery-2.2.1.min.js"></script>
+  <script>
+    $('.allButNav').css('display', 'none');
+  </script>
   <script src="js/wow.js"></script>
 
 </head>
@@ -52,20 +54,21 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="pageHero">
+  <div class="allButNav">
+  <div class="pageHero tacoHero heroIntro">
   </div>
-  <div class="container pageTitle">
+  <div class="container pageTitle slideDown">
     <h2>Classic street food favorites<br>with buggy ingredients</h2>
     <p>We take familiar foods and put our own insect twist on it. Our menu rotates fequently based on what's in season so sign up for our newsletter or follow us on istagram to keep up with the latest.</p>
   </div>
 
-  <div class="container menuStripe">
+  <div class="container menuStripe wow slideUp" data-wow-duration="1s" data-wow-offset="250">
     <h4>Explore our current offerings</h4>
     <p class="sub">Updated on April 24th</p>
   </div>
 
   <div class="container">
-    <div class="row">
+    <div class="row wow slideUp" data-wow-duration="1s" data-wow-offset="150">
       <a href="mealworm_tacos.html">
         <div class="one-half column menuItem taco">
           <img src="images/taco_menu.jpg">
@@ -75,27 +78,27 @@
           </div>
         </div>
       </a>
-      <div class="one-half column menuItem cupcake">
+      <div class="one-half column menuItem cupcake disabled">
         <img src="images/cupcake_menu.jpg">
         <div class="menuText">
-          <h4>Mealworm Street Tacos</h4>
-          <p>with, cotija cheese, cilantro and onion</p>
+          <h4>Cricket flour cupcake</h4>
+          <p>vanilla base with buttercream frosting</p>
       </div>
       </div>
     </div>
-    <div class="row">
-      <div class="one-half column menuItem spider">
+    <div class="row wow slideUp" data-wow-duration="1s" data-wow-offset="150">
+      <div class="one-half column menuItem spider disabled">
         <img src="images/spiderlegs_menu.jpg">
         <div class="menuText">
-          <h4>Mealworm Street Tacos</h4>
-          <p>with, cotija cheese, cilantro and onion</p>
+          <h4>Deep Fried Tarantula Legs</h4>
+          <p>Almond oil and garlic batter</p>
       </div>
       </div>
-      <div class="one-half column menuItem kabob">
+      <div class="one-half column menuItem kabob disabled">
         <img src="images/kabob_menu.jpg">
         <div class="menuText">
-          <h4>Mealworm Street Tacos</h4>
-          <p>with, cotija cheese, cilantro and onion</p>
+          <h4>Grasshoper kabob</h4>
+          <p>with onions and peppers</p>
       </div>
       </div>
     </div>
@@ -143,8 +146,12 @@
   </div>
   <div class="u-full-width copyright">
   </div>
+</div>
 
+  <script>
+    //$('body').fadeIn(750);
 
+  </script>
 <script src="js/app.js"></script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

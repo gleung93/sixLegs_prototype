@@ -7,8 +7,17 @@
   background-size: cover;
 }
 
+.tacoHero {
+  @include animation-duration(1.5s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+
 .pageTitle {
   padding: 60px 0px 30px 0px;
+  @include animation-duration(1.5s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
 }
 
 .pageTitle h2 {

@@ -1,12 +1,38 @@
+$(window).load(function() {
+  $('.allButNav').fadeIn(750);
+});
+
+
 new WOW().init();
+
+//Timeout
+var idleTime = 0;
+
+//Increment the idle time counter every minute.
+    var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+
+    $(this).mousemove(function (e) {
+        idleTime = 0;
+    });
+    $(this).keypress(function (e) {
+        idleTime = 0;
+    });
+
+function timerIncrement() {
+    idleTime = idleTime + 1;
+    if (idleTime > 5) {
+        window.location = "index.html";
+    }
+}
+
 
 //Play gif
 $("#bugin").delay(1000).queue(function(){$("#bugin").attr("src", "images/bugin.gif")});
 $("#pattern1").delay(4000).queue(function(){$("#pattern1").attr("src", "images/testPattern.gif")});
 
 //Fade in on page load
-$('body').css('display', 'none');
-$('body').fadeIn(750);
+//$('body').css('display', 'none');
+//$('body').fadeIn(750);
 
 //Fade out on navigation
 $('a').click(function() {
@@ -16,7 +42,11 @@ $('a').click(function() {
     //do something else?
   } else {
       newLocation = this.href;
-      $('body').fadeOut(750, newpage);
+      if (newLocation == "http://sixlegsfoodtruck.dev/index.html") {
+        $('.navigation').fadeOut(750);
+      }
+      //alert(newLocation);
+      $('.allButNav').fadeOut(750, newpage);
     }
 });
 

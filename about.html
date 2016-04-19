@@ -28,6 +28,9 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <script src="js/jquery-2.2.1.min.js"></script>
+  <script>
+    $('.allButNav').css('display', 'none');
+  </script>
   <script src="js/wow.js"></script>
 
 </head>
@@ -51,6 +54,7 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="allButNav">
   <div class="container pageTitle about">
     <div class="even">
       <h2 id='delicious' class="slideFromTopShort">Delicious</h2>
@@ -76,7 +80,7 @@
   </div>
 
   <div class="container aboutReasons">
-    <h2 class="wow slideUp" data-wow-duration="1s" data-wow-offset="200">4 good reasons to give bugs a chance</h2>
+    <h2 class="wow slideUp" data-wow-duration="1s" data-wow-offset="250">4 good reasons to give bugs a chance</h2>
     <div class="row wow slideUp" data-wow-duration="1s" data-wow-offset="150">
       <a href="menu.html">
         <div class="one-half column menuItem taste">
@@ -161,8 +165,11 @@
   </div>
   <div class="u-full-width copyright">
   </div>
+</div>
 
-
+  <script>
+    $('.aboutStripe').css("opacity", "1");
+  </script>
 <script src="js/app.js"></script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

@@ -15,7 +15,6 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,6 +28,9 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <script src="js/jquery-2.2.1.min.js"></script>
+  <script>
+    $('.allButNav').css('display', 'none');
+  </script>
   <script src="js/wow.js"></script>
 
 </head>
@@ -50,6 +52,7 @@
     </div>
   </div>
 
+  <div class="allButNav">
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="u-full-width pageTitle blue">
@@ -132,6 +135,7 @@
   </div>
   <div class="u-full-width copyright">
   </div>
+</div>
 
 <script>
  $('#land').show();

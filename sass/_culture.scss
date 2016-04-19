@@ -4,16 +4,28 @@
 }
 
 .discoverStripe {
+  position: relative;
   background-color: $darkBlue;
-  padding: 20px 0px;
+  padding: 30px 0px;
   text-align: center;
   color: white;
   margin: 70px 0px;
 }
 
-.discoverStripe h4 {
+.discoverStripe h3 {
+  margin: 0 0 10px 0;
+  //font-weight: 500;
+}
+
+.discoverStripe div {
+  width: 750px;
+  margin: 0 auto;
+}
+
+.discoverStripe p {
   margin: 0;
 }
+
 
 .map {
   position: relative;
@@ -27,10 +39,10 @@
 
 .marker {
   position: absolute;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   background: $red;
-  border-radius: 30px;
+  border-radius: 25px;
   border: 4px solid white;
   cursor: pointer;
 }
@@ -42,7 +54,7 @@
   background-color: white;
   top: -55px;
   box-shadow: 0px 3px 5px #CCCCCC;
-  left: -32px;
+  left: -35px;
   opacity: 0;
   @extend p.sub;
   @include transition(all .3s ease);
@@ -55,6 +67,30 @@
 #israel {
   top: 33%;
   left: 55%;
+}
+#m2 {
+  top: 28%;
+  left: 75%;
+}
+#m3 {
+  top: 40%;
+  left: 16%;
+}
+#m4 {
+  top: 57%;
+  left: 76%;
+}
+#m5 {
+  top: 49%;
+  left: 44%;
+}
+#m6 {
+  top: 63%;
+  left: 28%;
+}
+#m7 {
+  top: 78%;
+  left: 52%;
 }
 
 .modal {
@@ -71,7 +107,7 @@
   margin-right: auto;
   margin-left: auto;
   top: 20%;
-  @include transform(scale(.8));
+  @include transform(scale(.9));
   z-index: 999;
   @include transition(visibility 0s ease 0s, opacity 0.5s ease 0.3s, transform 0.5s ease-out 0.3s);
 }
@@ -131,4 +167,99 @@
   right: 0;
   bottom: 0;
   z-index: 99;
+}
+
+.alreadyEat {
+  margin-top: 160px;
+  margin-bottom: 120px;
+}
+
+.alreadyEat .heading {
+  margin-bottom: 90px;
+}
+
+.alreadyEat h5 {
+  margin: 0;
+  color: $red;
+}
+
+.alreadyEat h4 {
+  position: relative;
+  margin-bottom: 35px;
+  color: $darkBlue;
+}
+
+.alreadyEat h4:after {
+  content: "";
+  position: absolute;
+  background-color: $darkBlue;
+  height: 3px;
+  width: 190px;
+  bottom: -3px;
+  left: 0;
+}
+
+.alreadyEat h2 {
+  color: $red
+}
+
+.alreadyEat p {
+  max-width: 600px;
+}
+
+.alreadyEat .item {
+  text-align: center;
+  color: $darkBlue;
+}
+
+.alreadyEat .item h2 {
+  color: $darkBlue;
+}
+
+.alreadyEat .item img {
+  margin-bottom: 30px;
+  height: 150px;
+}
+
+.alreadyEat .item p {
+  margin-bottom: 10px;
+}
+
+#fragments {
+  position: absolute;
+  right: 0;
+  top: -200px;
+  width: auto;
+  height: 125%;
+  z-index: -9;
+}
+
+.natural {
+  position: relative;
+  padding: 50px 0 150px 0;
+  background-color: $red;
+  color: $cream;
+}
+
+.natural h2 {
+
+}
+
+#cave {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.photoCaption {
+  position: absolute;
+  left: 230px;
+  bottom: -90px;
+  background-color: $cream;
+  color: black;
+  padding: 10px 15px;
+  @extend p;
+  font-size: 15px;
+
 }

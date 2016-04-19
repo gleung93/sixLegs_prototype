@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Six Legs Food Truck - Menu</title>
+  <title>Six Legs Food Truck - About</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -46,62 +46,39 @@
       <ul>
         <li><a href="menu.html">menu</a></li>
         <li><a href="about.html">about</a></li>
-        <li><a href="locate.html">locate</a></li>
+          <li><a href="locate.html">locate</a></li>
         <li><a href="faq.html">FAQ</a></li>
       </ul>
     </div>
   </div>
 
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="allButNav">
-  <!--Google Maps-->
-  <div class="map-container">
-    <iframe ID="fountain" src="http://maps.google.com/maps?q=39.1017779,-84.5128662&z=15&output=embed" width="100%" height="450" frameborder="0" style="border:0"></iframe>
-    <iframe ID="OTR" src="http://maps.google.com/maps?q=39.109684,-84.5167347&z=15&output=embed" width="100%" height="450" frameborder="0" style="border:0"></iframe>
+
+  <div class="u-full-width tacoIntro">
+    <img id="floatingTacos" src="images/floatingTacos.jpg">
+    <div class="container">
+      <div class="seven columns u-pull-right">
+        <h2>Mealworm<br>Street Tacos</h2>
+        <p>We’ve taken this classic mexican street food and put a buggy twist on it! Enjoy Sauteed chili lime mealworms on a fresh corn tortilla topped with, cotija cheese, cilantro and onion.</p>
+        <img class="rating" src="images/stars.png">
+        <a class="numberReviews">14 reviews</a>
+      </div>
+    </div>
   </div>
 
-  <!--Location selector - schedule-->
-  <div class="u-full-width schedule">
-    <div class="container">
+  <div class="container">
     <div class="row">
-      <div class="one-half column fountain active slideFromTop delayhalf">
-        <h5>Current Location</h5>
-        <h4>Fountain Square</h4>
-        <p>512 Vine St <br>Cincinnati, OH 45202<br>(513) 555-6530</p>
-        <p class="time">Tuesday 11am - 3pm</p>
-      </div>
-      <div class="one-half otr column slideFromTop delayhalf">
-        <h5>NEXT LOCATION</h5>
-        <h4>Over the Rhine</h4>
-        <p>12 E 13th St, <br>Cincinnati, OH 45202<br>(513) 555-6530</p>
-        <p class="time">Wednesday 4pm - 8pm</p>
+      <div class="six columns">
+        <h3>So what do mealworms taste like?</h3>
+        <p>Mealworms on their own generally taste pretty mild, that’s why we reccommend them to people who are just starting eating insects.</p>
       </div>
     </div>
     <div class="row">
-      <a class="disabled button fadeIn delayhalf" data-hover="VIEW FULL SCHEDULE">View full schedule</a>
-    </div>
   </div>
 </div>
 
-  <!--Private Events-->
-  <div class="u-full-width events">
-    <div class="container">
-      <div class="one-half column">
-        <h3>Having a private Event?<br>Hire us!</h3>
-        <p>The Six Legs food truck is great for company events or community festivals!</p>
-        <p>For more information:</p>
-        <img class="truckVector" src="images/truckVector.png">
-        <div class="info">
-          <img src="images/phone.png">
-          <h5>(513) 555-6530</h5>
-        </div>
-        <div style="clear: both;"></div>
-        <div class="info">
-          <img src="images/email.png">
-          <h5>events@SixLegs.com</h5>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Footer -->
   <div class="u-full-width footer">
@@ -147,6 +124,9 @@
   </div>
 </div>
 
+  <script>
+    $('.aboutStripe').css("opacity", "1");
+  </script>
 <script src="js/app.js"></script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
