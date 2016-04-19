@@ -427,7 +427,7 @@ p, .menuItem:after {
   font-size: 18px;
   line-height: 23px; }
 
-p.sub, .sub.menuItem:after {
+p.sub, .sub.menuItem:after, .marker:after {
   font-family: museoSans, sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -552,7 +552,7 @@ p.subtitle, .subtitle.menuItem:after {
   color: #3B6566;
   font-weight: 700; }
 
-p.sub, .sub.menuItem:after {
+p.sub, .sub.menuItem:after, .marker:after {
   color: #737373; }
 
 .footer form {
@@ -768,7 +768,7 @@ p.sub, .sub.menuItem:after {
   background-color: #3B6566;
   color: white;
   text-align: center;
-  padding: 30px 0px;
+  padding: 50px 0px;
   background-image: url("../images/patternFineBlack.png");
   background-size: cover;
   overflow: hidden; }
@@ -776,7 +776,7 @@ p.sub, .sub.menuItem:after {
 .faq h2 {
   display: inline-block;
   position: relative;
-  margin-bottom: 100px; }
+  margin-bottom: 40px; }
 
 .faq h2:before {
   content: '“';
@@ -800,7 +800,7 @@ p.sub, .sub.menuItem:after {
 .pageHero {
   margin-top: 80px;
   width: 100%;
-  height: 450px;
+  height: 550px;
   background-image: url("../images/taco_hero.jpg");
   background-position: center center;
   background-size: cover; }
@@ -1298,5 +1298,132 @@ p.intro-subtext:after, .intro-subtext.menuItem:after {
 
 .aboutReasons .menuItem.taste:after {
   content: "Explore our menu"; }
+
+.pageHero.culture {
+  background-image: url("../images/thai_dude.jpg");
+  background-position: center 65%; }
+
+.discoverStripe {
+  background-color: #3B6566;
+  padding: 20px 0px;
+  text-align: center;
+  color: white;
+  margin: 70px 0px; }
+
+.discoverStripe h4 {
+  margin: 0; }
+
+.map {
+  position: relative;
+  padding: 0 0 0 120px;
+  overflow: hidden; }
+
+.map img {
+  margin: 0 auto; }
+
+.marker {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background: #BF401F;
+  border-radius: 30px;
+  border: 4px solid white;
+  cursor: pointer; }
+
+.marker:after {
+  content: "Locust";
+  position: absolute;
+  padding: 10px 20px;
+  background-color: white;
+  top: -55px;
+  box-shadow: 0px 3px 5px #CCCCCC;
+  left: -32px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.marker:hover:after {
+  opacity: 1; }
+
+#israel {
+  top: 33%;
+  left: 55%; }
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  height: 600px;
+  width: 1000px;
+  background-color: #BF401F;
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  top: 20%;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  z-index: 999;
+  -webkit-transition: visibility 0s ease 0s, opacity 0.5s ease 0.3s, -webkit-transform 0.5s ease-out 0.3s;
+  -moz-transition: visibility 0s ease 0s, opacity 0.5s ease 0.3s, -moz-transform 0.5s ease-out 0.3s;
+  transition: visibility 0s ease 0s, opacity 0.5s ease 0.3s, transform 0.5s ease-out 0.3s; }
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1); }
+
+.modal .left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-image: url("../images/locust.jpg");
+  background-position: center center;
+  background-size: cover;
+  box-sizing: border-box; }
+
+.modal .right {
+  float: left;
+  color: white;
+  padding: 40px;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box; }
+
+.modal .right p.sub, .modal .right .sub.menuItem:after, .modal .right .marker:after {
+  color: #7A0000;
+  margin-bottom: 50px; }
+
+.modal .right h3, .modal .right .footer input, .footer .modal .right input {
+  margin-bottom: 0; }
+
+.modal:after {
+  content: "x";
+  font-family: museoSans;
+  font-weight: 100;
+  font-size: 46px;
+  position: absolute;
+  right: 10px;
+  top: -13px;
+  cursor: pointer; }
+
+.overlay {
+  display: none;
+  background-color: black;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99; }
 
 /*# sourceMappingURL=app.css.map */

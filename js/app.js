@@ -4,10 +4,11 @@ new WOW().init();
 $("#bugin").delay(1000).queue(function(){$("#bugin").attr("src", "images/bugin.gif")});
 $("#pattern1").delay(4000).queue(function(){$("#pattern1").attr("src", "images/testPattern.gif")});
 
+//Fade in on page load
 $('body').css('display', 'none');
-
 $('body').fadeIn(750);
 
+//Fade out on navigation
 $('a').click(function() {
   var selected = $(this);
   event.preventDefault();
@@ -23,6 +24,19 @@ function newpage() {
   window.location = newLocation;
 }
 
+//Map interaction
+$(".marker").click(function(){
+  $(".overlay").fadeIn(300);
+  $(".modal").addClass("active");
+});
+
+$(".overlay, .modal").click(function(){
+  $(".modal").fadeOut(300);
+  $(".overlay").delay(300).fadeOut(300, function(){
+    $(".modal").css("display", "block");
+    $(".modal").removeClass("active");
+  });
+});
 
 //locate toogle
 $(".otr h4").click(function(){

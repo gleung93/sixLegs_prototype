@@ -1,0 +1,134 @@
+.pageHero.culture {
+  background-image: url("../images/thai_dude.jpg");
+  background-position: center 65%;
+}
+
+.discoverStripe {
+  background-color: $darkBlue;
+  padding: 20px 0px;
+  text-align: center;
+  color: white;
+  margin: 70px 0px;
+}
+
+.discoverStripe h4 {
+  margin: 0;
+}
+
+.map {
+  position: relative;
+  padding: 0 0 0 120px;
+  overflow: hidden;
+}
+
+.map img {
+  margin: 0 auto;
+}
+
+.marker {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background: $red;
+  border-radius: 30px;
+  border: 4px solid white;
+  cursor: pointer;
+}
+
+.marker:after {
+  content: "Locust";
+  position: absolute;
+  padding: 10px 20px;
+  background-color: white;
+  top: -55px;
+  box-shadow: 0px 3px 5px #CCCCCC;
+  left: -32px;
+  opacity: 0;
+  @extend p.sub;
+  @include transition(all .3s ease);
+}
+
+.marker:hover:after {
+  opacity: 1;
+}
+
+#israel {
+  top: 33%;
+  left: 55%;
+}
+
+.modal {
+  opacity: 0;
+  //display: block;
+  //display: none;
+  visibility: hidden;
+  height: 600px;
+  width: 1000px;
+  background-color: $red;
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  top: 20%;
+  @include transform(scale(.8));
+  z-index: 999;
+  @include transition(visibility 0s ease 0s, opacity 0.5s ease 0.3s, transform 0.5s ease-out 0.3s);
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  @include transform(scale(1));
+}
+
+.modal .left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-image: url("../images/locust.jpg");
+  background-position: center center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.modal .right {
+  float: left;
+  color: white;
+  padding: 40px;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.modal .right p.sub {
+  color: $darkRed;
+  margin-bottom: 50px;
+}
+
+.modal .right h3 {
+  margin-bottom: 0;
+}
+
+.modal:after {
+  content: "x";
+  font-family: museoSans;
+  font-weight: 100;
+  font-size: 46px;
+  position: absolute;
+  right: 10px;
+  top: -13px;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  background-color: black;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
