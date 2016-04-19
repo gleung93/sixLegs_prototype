@@ -157,6 +157,14 @@
   @include animation-delay(.5s);
 }
 
+.delayone {
+  @include animation-delay(1.0s);
+}
+
+.delay17 {
+  @include animation-delay(1.7s);
+}
+
 .delay25 {
   @include animation-delay(2.5s);
 }

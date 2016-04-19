@@ -78,11 +78,12 @@ h2 {
   font-family: museo, sans-serif;
   font-weight: 700;
   font-size: 56px;
+  letter-spacing: 1px;
 }
 
 h3 {
   font-family: museo, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 36px;
 }
 
@@ -100,13 +101,14 @@ h5 {
 
 p {
   font-family: museoSans, sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 23px;
 }
 
 p.sub {
   font-family: museoSans, sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
+  text-transform: uppercase;
 }

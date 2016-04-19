@@ -1,7 +1,27 @@
 new WOW().init();
 
+//Play gif
 $("#bugin").delay(1000).queue(function(){$("#bugin").attr("src", "images/bugin.gif")});
 $("#pattern1").delay(4000).queue(function(){$("#pattern1").attr("src", "images/testPattern.gif")});
+
+$('body').css('display', 'none');
+
+$('body').fadeIn(750);
+
+$('a').click(function() {
+  var selected = $(this);
+  event.preventDefault();
+  if (selected.hasClass("disabled")) {
+    //do something else?
+  } else {
+      newLocation = this.href;
+      $('body').fadeOut(750, newpage);
+    }
+});
+
+function newpage() {
+  window.location = newLocation;
+}
 
 
 //locate toogle
