@@ -25,6 +25,22 @@ function timerIncrement() {
     }
 }
 
+//FAQ
+$('.faqTitle').click(function(){
+  var target =  $(this).parent()
+
+  if (target.hasClass("active")) {
+    target.removeClass("active");
+      $(target).find(".answer").slideUp(500, "swing");
+  } else {
+    $(".question").not(target).removeClass("active");
+    $(".question").not(target).find(".answer").slideUp(500, "swing");
+    target.addClass("active");
+    $(target).find(".answer").slideDown(500, "swing");
+  }
+});
+
+
 
 //Play gif
 $("#bugin").delay(1000).queue(function(){$("#bugin").attr("src", "images/bugin.gif")});

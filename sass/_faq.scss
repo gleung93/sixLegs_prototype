@@ -1,0 +1,133 @@
+.faqIntro {
+  margin-top: 80px;
+  padding: 60px 0;
+  color: $darkBlue;
+}
+
+.faqContent {
+  margin-bottom: 200px;
+}
+
+.question {
+  position: relative;
+  width: 100%;
+  text-align: left;
+}
+
+.question:first-of-type:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $lightGrey;
+}
+
+.question:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $lightGrey;
+}
+
+.faqTitle {
+  position: relative;
+  height: 55px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.faqContent .Q {
+  position: absolute;
+  font-weight: 900;
+  font-size: 35px;
+  color: $red;
+  left: 0;
+  top: 0;
+  line-height: 55px;
+  text-align: center;
+  height: 100%;
+  width: 55px;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.faqContent .Q:before {
+  content: "Q";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 55px;
+  text-align: center;
+  background-color: $red;
+  color: white;
+  @include transition(all .2s ease-in-out);
+  @include transform(translateX(-55px));
+}
+
+.faqTitle:hover .Q:before {
+  @include transform(translateX(0));
+}
+
+.faqContent h3 {
+  position: relative;
+  font-weight: 500;
+  font-size: 28px;
+  width: 100%;
+  padding-left: 75px;
+  color: $red;
+  background-color: white;
+  float: left;
+  line-height: 55px;
+  margin: 0;
+  @include transition(all .5s ease-in-out);
+  overflow: hidden;
+}
+
+.faqContent h3:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 55px;
+  font-weight: 500;
+  font-size: 28px;
+  color: white;
+  background-color: $red;
+  line-height: 55px;
+  @include transition(all .2s ease-in-out);
+  @include transform(translateX(-1000px));
+
+}
+
+.question.active h3:after {
+  @include transform(translateX(0));
+}
+
+.answer {
+  display: none;
+  padding: 20px 75px;
+  text-align: left;
+}
+
+.question.active .answer {
+  //display: block;
+}
+
+.question.active .Q, .question.active .faqTitle {
+  background-color: $red;
+  color: white;
+}
+
+.question.active .faqTitle h3 {
+  color: white;
+}
