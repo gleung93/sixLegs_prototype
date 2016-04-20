@@ -3,6 +3,10 @@
   height: 450px;
   background-color: $googleGrey;
   z-index: 99;
+  @include animation-duration(1.5s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+  z-index: 98;
 }
 
 #OTR {
@@ -10,7 +14,7 @@
 }
 
 .fountain, .otr {
-  @include animation-duration(1s);
+  @include animation-duration(1.0s);
   @include animation-fill-mode(both);
   @include animation-timing-function(easeOutQuint);
 }
@@ -18,6 +22,9 @@
 .schedule {
   padding: 50px 0;
   background-color: $lightGrey;
+  @include animation-duration(1.0s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
 }
 
 .schedule h4 {

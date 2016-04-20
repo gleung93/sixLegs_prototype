@@ -22,8 +22,8 @@
   }
 }
 
-.fadeInRight {
-  @include animation(fadeInRight 1.0s easeOutQuint forwards);
+.fadeIn {
+  @include animation(fadeIn 1.0s easeOutQuint forwards);
 }
 
 @include keyframes(fadeInLeft) {

@@ -48,10 +48,10 @@
     opacity: 0; }
   to {
     opacity: 1; } }
-.fadeInRight {
-  -webkit-animation: fadeInRight 1s easeOutQuint forwards;
-  -moz-animation: fadeInRight 1s easeOutQuint forwards;
-  animation: fadeInRight 1s easeOutQuint forwards; }
+.fadeIn {
+  -webkit-animation: fadeIn 1s easeOutQuint forwards;
+  -moz-animation: fadeIn 1s easeOutQuint forwards;
+  animation: fadeIn 1s easeOutQuint forwards; }
 
 @-webkit-keyframes fadeInLeft {
   from {
@@ -453,6 +453,11 @@ h4 {
 h5 {
   font-family: museoSans, sans-serif;
   font-weight: 700;
+  font-size: 20px; }
+
+h5.body {
+  font-family: museoSans, sans-serif;
+  font-weight: 500;
   font-size: 20px; }
 
 p, .menuItem:after, .photoCaption {
@@ -962,7 +967,17 @@ p.sub, .sub.menuItem:after, .marker:after, .sub.photoCaption {
   margin-top: 70px;
   height: 450px;
   background-color: #E9E5DB;
-  z-index: 99; }
+  z-index: 99;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: easeOutQuint;
+  -moz-animation-timing-function: easeOutQuint;
+  animation-timing-function: easeOutQuint;
+  z-index: 98; }
 
 #OTR {
   display: none; }
@@ -980,7 +995,16 @@ p.sub, .sub.menuItem:after, .marker:after, .sub.photoCaption {
 
 .schedule {
   padding: 50px 0;
-  background-color: #F8F8F8; }
+  background-color: #F8F8F8;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: easeOutQuint;
+  -moz-animation-timing-function: easeOutQuint;
+  animation-timing-function: easeOutQuint; }
 
 .schedule h4 {
   display: inline-block;
@@ -1598,12 +1622,47 @@ p.intro-subtext:after, .intro-subtext.menuItem:after, .intro-subtext.photoCaptio
 .tacoIntro {
   position: relative;
   margin-top: 80px;
-  padding: 150px 0 300px 0; }
+  padding: 130px 0 300px 0;
+  margin-bottom: 80px; }
+
+.tacoIntro .seven {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: easeOutQuint;
+  -moz-animation-timing-function: easeOutQuint;
+  animation-timing-function: easeOutQuint; }
+
+.tacoIntro h2 {
+  color: #3B6566; }
 
 #floatingTacos {
   position: absolute;
   left: 0;
-  width: 800px; }
+  top: 120px;
+  width: 850px;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: easeOutQuint;
+  -moz-animation-timing-function: easeOutQuint;
+  animation-timing-function: easeOutQuint; }
+
+#tacoPattern {
+  position: absolute;
+  right: -30px; }
 
 .tacoIntro .rating {
   float: left;
@@ -1611,5 +1670,58 @@ p.intro-subtext:after, .intro-subtext.menuItem:after, .intro-subtext.photoCaptio
 
 .tacoIntro .numberReviews {
   float: left; }
+
+.whatTaste {
+  margin-bottom: 80px; }
+
+.whatTasteIntro h3, .whatTasteIntro .footer input, .footer .whatTasteIntro input {
+  color: #BF401F; }
+
+.whatTasteIntro h5 {
+  margin-bottom: 60px; }
+
+.whatTasteIntro {
+  margin-bottom: 60px; }
+
+.tasteItem {
+  position: relative;
+  height: 340px; }
+
+.tasteItem:after {
+  content: "+";
+  position: absolute;
+  color: #BF401F;
+  font-size: 24px;
+  right: -15px;
+  bottom: 135px; }
+
+.tasteItem:last-of-type:after {
+  content: "";
+  position: absolute;
+  color: #BF401F;
+  font-size: 24px;
+  right: -43px;
+  bottom: 150px; }
+
+.tasteItem img {
+  display: block;
+  width: 175px;
+  margin: 0 auto; }
+
+.tasteItem h5 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #3B6566; }
+
+.omegaIntro {
+  margin-bottom: 20px; }
+
+.omegaIntro h5 {
+  color: #6CB6BC;
+  margin: 0; }
+
+.omega {
+  color: #3B6566;
+  padding: 50px 0 90px 0; }
 
 /*# sourceMappingURL=app.css.map */

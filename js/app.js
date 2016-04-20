@@ -43,10 +43,10 @@ $('a').click(function() {
   } else {
       newLocation = this.href;
       if (newLocation == "http://sixlegsfoodtruck.dev/index.html") {
-        $('.navigation').fadeOut(750);
+        //$('.navigation').fadeOut(750);
       }
       //alert(newLocation);
-      $('.allButNav').fadeOut(750, newpage);
+      $('body').fadeOut(750, newpage);
     }
 });
 

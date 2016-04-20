@@ -1,13 +1,45 @@
 .tacoIntro {
   position: relative;
   margin-top: 80px;
-  padding: 150px 0 300px 0;
+  padding: 130px 0 300px 0;
+  margin-bottom: 80px;
+
 }
+
+.tacoIntro .seven {
+  @include animation-delay(1.0s);
+  @include animation-duration(1.5s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+
+
+.tacoIntro h2 {
+  color: $darkBlue;
+
+}
+
+.tacoIntro h5 {
+}
+
+.tacoIntro .ratingGroup {
+}
+
 
 #floatingTacos {
   position: absolute;
   left: 0;
-  width: 800px;
+  top: 120px;
+  width: 850px;
+  @include animation-delay(.5s);
+  @include animation-duration(2s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+
+#tacoPattern {
+  position: absolute;
+  right: -30px;
 }
 
 .tacoIntro .rating {
@@ -18,5 +50,75 @@
 
 .tacoIntro .numberReviews {
   float: left;
+}
 
+.whatTaste {
+  margin-bottom: 80px;
+}
+
+.whatTasteIntro h3 {
+  color: $red;
+}
+
+.whatTasteIntro h5 {
+  margin-bottom: 60px;
+}
+
+.whatTasteIntro {
+  margin-bottom: 60px;
+}
+
+.tasteItem {
+  position: relative;
+  height: 340px;
+}
+
+.tasteItem:after {
+  content: "+";
+  position: absolute;
+  color: $red;
+  font-size: 24px;
+  right: -15px;
+  bottom: 135px;
+}
+
+.tasteItem:last-of-type:after {
+  content: "";
+  position: absolute;
+  color: $red;
+  font-size: 24px;
+  right: -43px;
+  bottom: 150px;
+}
+
+.tasteItem img {
+  display: block;
+  width: 175px;
+  margin: 0 auto;
+}
+
+.tasteItem h5 {
+  text-align: center;
+  text-transform: uppercase;
+  color: $darkBlue;
+}
+
+.omegaIntro {
+  margin-bottom: 20px;
+}
+
+.omegaIntro h5 {
+  color: $lightBlue;
+  margin: 0;
+}
+
+.omega {
+  //background-color: $darkBlue;
+  //color: white;
+  color: $darkBlue;
+  padding: 50px 0 90px 0;
+}
+
+.omega img {
+  //height: 350px;
 }
