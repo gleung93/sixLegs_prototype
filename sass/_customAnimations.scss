@@ -37,6 +37,10 @@
   }
 }
 
+.fadeOut {
+  @include animation(fadeIn 1.0s easeOutQuint forwards);
+}
+
 .fadeInLeft {
   @include animation(fadeInLeft 1.0s easeOutQuint forwards);
 }
@@ -167,6 +171,9 @@
 .heroIntro {
   @include animation-name(heroIntro);
 }
+.delay0 {
+  @include animation-delay(0s);
+}
 
 .delayhalf {
   @include animation-delay(.5s);
@@ -182,4 +189,8 @@
 
 .delay25 {
   @include animation-delay(2.5s);
+}
+
+.delay4 {
+  @include animation-delay(4s);
 }

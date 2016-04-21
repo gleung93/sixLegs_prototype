@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="278px" height="278px" viewBox="0 0 278 278" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="278" height="278" rx="3"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="278" height="278" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="health" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mealworm-tacos-copy-11" transform="translate(-330.000000, -1668.000000)">
+            <g id="Group-2" transform="translate(330.000000, 1668.000000)">
+                <use id="Rectangle-26-Copy" stroke="#BF401F" mask="url(#mask-2)" stroke-width="16" xlink:href="#path-1"></use>
+                <text id="Ca-Copy" font-family="MuseoSans-700, Museo Sans" font-size="105" font-weight="500" fill="#BF401F">
+                    <tspan x="73" y="166">Ca</tspan>
+                </text>
+                <text id="CALCIUM-Copy" font-family="MuseoSans-500, Museo Sans" font-size="28" font-weight="normal" fill="#BF401F">
+                    <tspan x="75" y="202">CALCIUM</tspan>
+                </text>
+                <text id="20-copy" font-family="MuseoSans-500, Museo Sans" font-size="24" font-weight="normal" fill="#BF401F">
+                    <tspan x="21" y="39">20</tspan>
+                </text>
+                <text id="40.078-copy" font-family="MuseoSans-500, Museo Sans" font-size="24" font-weight="normal" fill="#BF401F">
+                    <tspan x="179" y="39">40.078</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

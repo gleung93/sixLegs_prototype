@@ -82,6 +82,11 @@
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
+.fadeOut {
+  -webkit-animation: fadeIn 1s easeOutQuint forwards;
+  -moz-animation: fadeIn 1s easeOutQuint forwards;
+  animation: fadeIn 1s easeOutQuint forwards; }
+
 .fadeInLeft {
   -webkit-animation: fadeInLeft 1s easeOutQuint forwards;
   -moz-animation: fadeInLeft 1s easeOutQuint forwards;
@@ -359,6 +364,11 @@
   -moz-animation-name: heroIntro;
   animation-name: heroIntro; }
 
+.delay0 {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s; }
+
 .delayhalf {
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
@@ -378,6 +388,11 @@
   -webkit-animation-delay: 2.5s;
   -moz-animation-delay: 2.5s;
   animation-delay: 2.5s; }
+
+.delay4 {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  animation-delay: 4s; }
 
 @font-face {
   font-family: museo;
@@ -471,6 +486,56 @@ p.sub, .sub.menuItem:after, .marker:after, .sub.photoCaption {
   font-weight: 500;
   font-size: 15px;
   text-transform: uppercase; }
+
+a.text {
+  position: relative;
+  color: #BF401F;
+  font-family: museoSans, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration: none; }
+
+a.text:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: #BF401F;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: translateY(6px);
+  -moz-transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  -o-transform: translateY(6px);
+  transform: translateY(6px); }
+
+a.text:hover {
+  color: #BF401F; }
+
+a.text:hover:before {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px); }
+
+a.text:after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 3px;
+  height: 14px;
+  width: 14px;
+  margin-top: 2px;
+  background-image: url("../images/arrow_right.png");
+  background-position: center center;
+  background-repeat: no-repeat; }
 
 a.button {
   position: relative;
@@ -583,6 +648,26 @@ a.button.ghost:hover:after {
 
 .disabled {
   cursor: not-allowed; }
+
+#arrowDown {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  margin-left: 15px;
+  width: 50px;
+  height: auto;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: easeOutQuint;
+  -moz-animation-timing-function: easeOutQuint;
+  animation-timing-function: easeOutQuint;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
 
 .footer {
   background-color: #F8F8F8;
@@ -847,11 +932,8 @@ p.sub, .sub.menuItem:after, .marker:after, .sub.photoCaption {
   margin-top: 80px;
   width: 100%;
   height: 550px;
-  background-image: url("../images/taco_hero.jpg");
   background-position: center center;
-  background-size: cover; }
-
-.tacoHero {
+  background-size: cover;
   -webkit-animation-duration: 1.5s;
   -moz-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -861,6 +943,9 @@ p.sub, .sub.menuItem:after, .marker:after, .sub.photoCaption {
   -webkit-animation-timing-function: easeOutQuint;
   -moz-animation-timing-function: easeOutQuint;
   animation-timing-function: easeOutQuint; }
+
+.tacoHero {
+  background-image: url("../images/taco_hero.jpg"); }
 
 .pageTitle {
   padding: 60px 0px 30px 0px;
@@ -1726,11 +1811,38 @@ p.intro-subtext:after, .intro-subtext.menuItem:after, .intro-subtext.photoCaptio
 
 .faqIntro {
   margin-top: 80px;
-  padding: 60px 0;
-  color: #3B6566; }
+  height: 350px;
+  color: white;
+  background-color: #3B6566;
+  color: white;
+  background-image: url("../images/patternFineBlack.png");
+  background-size: cover;
+  overflow: hidden;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: easeOutQuint;
+  -moz-animation-timing-function: easeOutQuint;
+  animation-timing-function: easeOutQuint; }
+
+#faqAnimate {
+  margin-top: 75px;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: easeOutQuint;
+  -moz-animation-timing-function: easeOutQuint;
+  animation-timing-function: easeOutQuint; }
 
 .faqContent {
-  margin-bottom: 200px; }
+  margin-top: 100px;
+  margin-bottom: 100px; }
 
 .question {
   position: relative;
@@ -1744,7 +1856,7 @@ p.intro-subtext:after, .intro-subtext.menuItem:after, .intro-subtext.photoCaptio
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #F8F8F8; }
+  background-color: #D5D5D5; }
 
 .question:after {
   content: '';
@@ -1753,27 +1865,28 @@ p.intro-subtext:after, .intro-subtext.menuItem:after, .intro-subtext.photoCaptio
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #F8F8F8; }
+  background-color: #D5D5D5; }
 
 .faqTitle {
-  position: relative;
-  height: 55px;
+  height: 65px;
   cursor: pointer;
-  background-color: white; }
+  background-color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
 
 .faqContent .Q {
-  position: absolute;
+  position: relative;
   font-weight: 900;
   font-size: 35px;
   color: #BF401F;
-  left: 0;
-  top: 0;
-  line-height: 55px;
+  float: left;
+  line-height: 65px;
   text-align: center;
   height: 100%;
-  width: 55px;
-  overflow: hidden;
-  z-index: 99; }
+  width: 65px;
+  margin-right: 20px;
+  overflow: hidden; }
 
 .faqContent .Q:before {
   content: "Q";
@@ -1784,18 +1897,18 @@ p.intro-subtext:after, .intro-subtext.menuItem:after, .intro-subtext.photoCaptio
   width: 100%;
   font-weight: 900;
   font-size: 35px;
-  line-height: 55px;
+  line-height: 65px;
   text-align: center;
   background-color: #BF401F;
   color: white;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-transform: translateX(-55px);
-  -moz-transform: translateX(-55px);
-  -ms-transform: translateX(-55px);
-  -o-transform: translateX(-55px);
-  transform: translateX(-55px); }
+  -webkit-transform: translateX(-65px);
+  -moz-transform: translateX(-65px);
+  -ms-transform: translateX(-65px);
+  -o-transform: translateX(-65px);
+  transform: translateX(-65px); }
 
 .faqTitle:hover .Q:before {
   -webkit-transform: translateX(0);
@@ -1805,53 +1918,24 @@ p.intro-subtext:after, .intro-subtext.menuItem:after, .intro-subtext.photoCaptio
   transform: translateX(0); }
 
 .faqContent h3, .faqContent .footer input, .footer .faqContent input {
-  position: relative;
   font-weight: 500;
   font-size: 28px;
-  width: 100%;
-  padding-left: 75px;
   color: #BF401F;
-  background-color: white;
   float: left;
-  line-height: 55px;
+  line-height: 65px;
   margin: 0;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  overflow: hidden; }
-
-.faqContent h3:after, .faqContent .footer input:after, .footer .faqContent input:after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 55px;
-  font-weight: 500;
-  font-size: 28px;
-  color: white;
-  background-color: #BF401F;
-  line-height: 55px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-transform: translateX(-1000px);
-  -moz-transform: translateX(-1000px);
-  -ms-transform: translateX(-1000px);
-  -o-transform: translateX(-1000px);
-  transform: translateX(-1000px); }
-
-.question.active h3:after, .question.active .footer input:after, .footer .question.active input:after {
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0); }
+  transition: all 0.5s ease-in-out; }
 
 .answer {
   display: none;
-  padding: 20px 75px;
-  text-align: left; }
+  padding: 25px 95px;
+  text-align: left;
+  max-width: 750px; }
+
+.answer p, .answer .menuItem:after, .answer .photoCaption {
+  margin-bottom: 15px; }
 
 .question.active .Q, .question.active .faqTitle {
   background-color: #BF401F;
@@ -1859,5 +1943,60 @@ p.intro-subtext:after, .intro-subtext.menuItem:after, .intro-subtext.photoCaptio
 
 .question.active .faqTitle h3, .question.active .faqTitle .footer input, .footer .question.active .faqTitle input {
   color: white; }
+
+.question.active .Q:before {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0); }
+
+.faqMore p, .faqMore .menuItem:after, .faqMore .photoCaption {
+  margin-bottom: 10px; }
+
+.faqMore {
+  margin-bottom: 125px; }
+
+.healthHero {
+  background-image: url("../images/healthhero.jpg"); }
+
+.protein {
+  margin-top: 150px; }
+
+.protein h3, .protein .footer input, .footer .protein input {
+  color: #3B6566; }
+
+.allAminoAcids {
+  padding-top: 40px; }
+
+.aminoAcid {
+  position: relative; }
+
+.aminoAcid img {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.aminoAcid p, .aminoAcid .menuItem:after, .aminoAcid .photoCaption {
+  padding-left: 70px;
+  line-height: 50px; }
+
+.calcium {
+  margin-top: 200px; }
+
+.calcium img {
+  height: 250px;
+  width: auto; }
+
+.calcium h3, .calcium .footer input, .footer .calcium input {
+  margin-top: 20px;
+  color: #3B6566; }
+
+.healthOmega {
+  margin-top: 200px;
+  margin-bottom: 200px; }
+
+.healthOmega h3, .healthOmega .footer input, .footer .healthOmega input {
+  color: #3B6566; }
 
 /*# sourceMappingURL=app.css.map */

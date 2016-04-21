@@ -1,3 +1,48 @@
+a.text {
+  position: relative;
+  color: $red;
+  font-family: museoSans, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+a.text:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: $red;
+  opacity: 0;
+  @include transition(all .2s ease-in-out);
+  @include transform(translateY(6px));
+}
+
+a.text:hover {
+  color: $red;
+}
+
+a.text:hover:before {
+  opacity: 1;
+  @include transform(translateY(0px));
+}
+
+a.text:after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 3px;
+  height: 14px;
+  width: 14px;
+  margin-top: 2px;
+  background-image: url("../images/arrow_right.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 a.button {
   position: relative;
   background-color: rgba(191, 64, 31, 1);
@@ -95,4 +140,21 @@ a.buttonNoWhite {
 
 .disabled {
   cursor: not-allowed;
+}
+
+#arrowDown {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  margin-left: 15px;
+  width: 50px;
+  height: auto;
+  @include animation-duration(1.5s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+  @include transition(all .5s ease-out);
+}
+
+.notScrolled {
+  //opacity: 1 !important;
 }

@@ -1,11 +1,27 @@
 .faqIntro {
   margin-top: 80px;
-  padding: 60px 0;
-  color: $darkBlue;
+  height: 350px;
+  color: white;
+  background-color: $darkBlue;
+  color: white;
+  background-image: url("../images/patternFineBlack.png");
+  background-size: cover;
+  overflow: hidden;
+  @include animation-duration(1.5s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+
+#faqAnimate {
+  margin-top: 75px;
+  @include animation-duration(1s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
 }
 
 .faqContent {
-  margin-bottom: 200px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .question {
@@ -21,7 +37,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: $lightGrey;
+    background-color: $mediumGrey;
 }
 
 .question:after {
@@ -31,29 +47,28 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: $lightGrey;
+    background-color: $mediumGrey;
 }
 
 .faqTitle {
-  position: relative;
-  height: 55px;
+  height: 65px;
   cursor: pointer;
   background-color: white;
+  @include transition(all 0.5s ease-in-out);
 }
 
 .faqContent .Q {
-  position: absolute;
+  position: relative;
   font-weight: 900;
   font-size: 35px;
   color: $red;
-  left: 0;
-  top: 0;
-  line-height: 55px;
+  float: left;
+  line-height: 65px;
   text-align: center;
   height: 100%;
-  width: 55px;
+  width: 65px;
+  margin-right: 20px;
   overflow: hidden;
-  z-index: 99;
 }
 
 .faqContent .Q:before {
@@ -65,12 +80,12 @@
   width: 100%;
   font-weight: 900;
   font-size: 35px;
-  line-height: 55px;
+  line-height: 65px;
   text-align: center;
   background-color: $red;
   color: white;
   @include transition(all .2s ease-in-out);
-  @include transform(translateX(-55px));
+  @include transform(translateX(-65px));
 }
 
 .faqTitle:hover .Q:before {
@@ -78,49 +93,28 @@
 }
 
 .faqContent h3 {
-  position: relative;
   font-weight: 500;
   font-size: 28px;
-  width: 100%;
-  padding-left: 75px;
   color: $red;
-  background-color: white;
   float: left;
-  line-height: 55px;
+  line-height: 65px;
   margin: 0;
-  @include transition(all .5s ease-in-out);
-  overflow: hidden;
-}
-
-.faqContent h3:after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 55px;
-  font-weight: 500;
-  font-size: 28px;
-  color: white;
-  background-color: $red;
-  line-height: 55px;
-  @include transition(all .2s ease-in-out);
-  @include transform(translateX(-1000px));
-
-}
-
-.question.active h3:after {
-  @include transform(translateX(0));
+  @include transition(all 0.5s ease-in-out);
 }
 
 .answer {
   display: none;
-  padding: 20px 75px;
+  padding: 25px 95px;
   text-align: left;
+  max-width: 750px;
 }
 
-.question.active .answer {
-  //display: block;
+.answer p {
+  margin-bottom: 15px;
+}
+
+.answer a {
+
 }
 
 .question.active .Q, .question.active .faqTitle {
@@ -130,4 +124,16 @@
 
 .question.active .faqTitle h3 {
   color: white;
+}
+
+.question.active .Q:before {
+  @include transform(translateX(0));
+}
+
+.faqMore p {
+  margin-bottom: 10px;
+}
+
+.faqMore {
+  margin-bottom: 125px;
 }

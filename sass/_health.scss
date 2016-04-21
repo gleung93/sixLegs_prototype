@@ -1,0 +1,53 @@
+.healthHero {
+  background-image: url("../images/healthhero.jpg")
+}
+
+.protein {
+  margin-top: 150px;
+}
+
+.protein h3 {
+  color: $darkBlue;
+}
+
+.allAminoAcids {
+  padding-top: 40px;
+}
+
+.aminoAcid {
+  position: relative;
+}
+
+.aminoAcid img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.aminoAcid p {
+  padding-left: 70px;
+  line-height: 50px;
+}
+
+.calcium {
+  margin-top: 200px;
+}
+
+.calcium img {
+  height: 250px;
+  width: auto;
+}
+
+.calcium h3 {
+  margin-top: 20px;
+  color: $darkBlue;
+}
+
+.healthOmega {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.healthOmega h3 {
+  color: $darkBlue;
+}

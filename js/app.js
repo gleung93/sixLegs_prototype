@@ -40,10 +40,31 @@ $('.faqTitle').click(function(){
   }
 });
 
+//Arrow disapear on scroll - THIS DUMB
+var didScroll = false;
+
+window.onscroll = doThisStuffOnScroll;
+
+function doThisStuffOnScroll() {
+    didScroll = true;
+}
+
+setInterval(function() {
+    if(didScroll) {
+        didScroll = false;
+        if($('#arrowDown').hasClass("notScrolled")) {
+            $('#arrowDown').removeClass("slideFromTopShort");
+            $('#arrowDown').removeClass("delay4");
+            $('#arrowDown').addClass("delay0");
+            $('#arrowDown').fadeTo(750, 0);
+        }
+    }
+}, 100);
 
 
 //Play gif
 $("#bugin").delay(1000).queue(function(){$("#bugin").attr("src", "images/bugin.gif")});
+$("#faqAnimate").delay(1000).queue(function(){$("#faqAnimate").attr("src", "images/faqAnimate.gif")});
 $("#pattern1").delay(4000).queue(function(){$("#pattern1").attr("src", "images/testPattern.gif")});
 
 //Fade in on page load
