@@ -7,7 +7,7 @@
 }
 
 .tacoIntro .seven {
-  @include animation-delay(1.0s);
+  @include animation-delay(.3s);
   @include animation-duration(1.5s);
   @include animation-fill-mode(both);
   @include animation-timing-function(easeOutQuint);
@@ -31,8 +31,7 @@
   left: 0;
   top: 120px;
   width: 850px;
-  @include animation-delay(.5s);
-  @include animation-duration(2s);
+  @include animation-duration(1.8s);
   @include animation-fill-mode(both);
   @include animation-timing-function(easeOutQuint);
 }

@@ -1,22 +1,17 @@
-$(window).load(function() {
-  $('.allButNav').fadeIn(750);
-});
-
-
+//Scroll plugin
 new WOW().init();
 
 //Timeout
 var idleTime = 0;
 
-//Increment the idle time counter every minute.
-    var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
 
-    $(this).mousemove(function (e) {
-        idleTime = 0;
-    });
-    $(this).keypress(function (e) {
-        idleTime = 0;
-    });
+$(this).mousemove(function (e) {
+    idleTime = 0;
+});
+$(this).keypress(function (e) {
+    idleTime = 0;
+});
 
 function timerIncrement() {
     idleTime = idleTime + 1;
@@ -24,6 +19,16 @@ function timerIncrement() {
         window.location = "index.html";
     }
 }
+
+//Active Nav links
+$(function() {
+     var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+     //alert(pgurl);
+     $(".navigation ul li a").each(function(){
+          if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
+          $(this).addClass("active");
+     })
+});
 
 //FAQ
 $('.faqTitle').click(function(){
@@ -39,27 +44,6 @@ $('.faqTitle').click(function(){
     $(target).find(".answer").slideDown(500, "swing");
   }
 });
-
-//Arrow disapear on scroll - THIS DUMB
-var didScroll = false;
-
-window.onscroll = doThisStuffOnScroll;
-
-function doThisStuffOnScroll() {
-    didScroll = true;
-}
-
-setInterval(function() {
-    if(didScroll) {
-        didScroll = false;
-        if($('#arrowDown').hasClass("notScrolled")) {
-            $('#arrowDown').removeClass("slideFromTopShort");
-            $('#arrowDown').removeClass("delay4");
-            $('#arrowDown').addClass("delay0");
-            $('#arrowDown').fadeTo(750, 0);
-        }
-    }
-}, 100);
 
 
 //Play gif
@@ -79,17 +63,28 @@ $('a').click(function() {
     //do something else?
   } else {
       newLocation = this.href;
-      if (newLocation == "http://sixlegsfoodtruck.dev/index.html") {
-        //$('.navigation').fadeOut(750);
-      }
       //alert(newLocation);
-      $('body').fadeOut(750, newpage);
+      $('body').fadeOut(500, newpage);
     }
 });
 
 function newpage() {
   window.location = newLocation;
 }
+
+//Email input - Why am i wasting my time with this?
+$('input').on('keyup', function() {
+     if (this.value.length > 1) {
+          $('.footer .formSubmit').fadeIn(300);
+     } else {
+       $('.footer .formSubmit').fadeOut(300);
+     }
+});
+$('.footer .formSubmit').click(function(){
+  alert("Thank you!");
+  var formss = $('form input').val("");
+  $('.footer .formSubmit').fadeOut(300);
+});
 
 //Map interaction
 $(".marker").click(function(){

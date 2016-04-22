@@ -1,0 +1,121 @@
+.map-container {
+  position: fixed;
+  top: -120px;
+  left: 525px;
+  right: 0;
+  bottom: 0;
+  height: calc(100vh + 120px);
+  background-color: $googleGrey;
+  z-index: 97;
+  @include animation-duration(1.5s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+.place-card {
+  display: none;
+}
+
+.panel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $lightGrey;
+  background-image: url("../images/leftPanel.png");
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 98;
+  width: 525px;
+}
+
+#OTR {
+  display: none;
+}
+
+.fountain, .otr {
+  @include animation-duration(1.0s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+
+.schedule {
+  padding: 50px 0;
+  background-color: $lightGrey;
+  @include animation-duration(1.0s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+
+.schedule h4 {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.schedule h5 {
+  font-size: 16px;
+  margin-bottom: 0;
+  color: $grey;
+  @include transition(all .3s ease-out);
+  text-transform: uppercase;
+}
+
+.schedule .active h4,
+.schedule .active p.time
+ {
+  color: $darkBlue;
+}
+
+.schedule h4:after {
+  content:"";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -5px;
+  height: 4px;
+  opacity: 0;
+  background-color: $darkBlue;
+  @include transition(all 0.3s ease-out);
+  @include transform(translateY(10px));
+}
+
+.schedule .active h4:after {
+  opacity: 1;
+  @include transform(translateY(0));
+}
+
+.schedule .active h5 {
+  color: $lightBlue;
+}
+
+.schedule .button {
+  margin-top: 30px;
+  @include animation-duration(1s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
+}
+
+.events {
+  padding: 100px 0;
+  position: relative;
+}
+
+.events h3 {
+  color: $darkBlue;
+}
+
+.truckVector {
+  position: absolute;
+  right: -40%;
+  top: 30px;
+}
+
+.info h5, .info img {
+  float: left;
+}
+
+.info h5 {
+  line-height: 60px;
+  margin-left: 15px;
+}

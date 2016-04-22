@@ -38,7 +38,7 @@
 
   <!-- Primary Navigation
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="navigation navLight">
+  <div class="navigation navLight fadeIn">
     <div class="container">
       <a href="index.html">
         <img class="lightLogo" src="images/mark.svg">
@@ -64,7 +64,10 @@
     <p id="tagline" class="slideUp">We believe that insect foods can enrich our culture, our bodies and the planet. We'd love to <em>share them with you.</em></p>
   </div>
 
-  <img class="slideFromTopShort delay4 notScrolled" src="images/arrowDown.svg" id="arrowDown">
+  <div id="arrowDown">
+    <div class="whiteCover wow fadeIn" data-wow-duration=".5s" data-wow-offset="170"></div>
+    <img class="slideFromTopShort delay17" src="images/arrowDown.svg">
+  </div>
 
   <div class="u-full-width aboutStripe wow slideUp" data-wow-duration="2s" data-wow-offset="350">
     <div class="container">
@@ -84,44 +87,48 @@
   <div class="container aboutReasons">
     <h2 class="wow slideUp" data-wow-duration="1s" data-wow-offset="250">4 good reasons to give bugs a chance</h2>
     <div class="row wow slideUp" data-wow-duration="1s" data-wow-offset="150">
-      <a href="menu.html">
         <div class="one-half column menuItem taste">
-          <div class="menuText">
-            <img src="images/1.svg">
-            <h4>They taste great</h4>
-            <p>It's true! We'll never serve anything that we<br>don't think is truly delicious. </p>
-          </div>
+          <a class="aboutLink" href="menu.html">
+            <div class="menuText">
+              <img src="images/1.svg">
+              <h4>They taste great</h4>
+              <p>It's true! We'll never serve anything that we<br>don't think is truly delicious. </p>
+              <p class="aboutTextLink">Explore our menu</p>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="environment.html">
         <div class="one-half column menuItem">
-          <div class="menuText">
-            <img src="images/2.svg">
-            <h4>They’re good for the environment</h4>
-            <p>Utlizing insects would reduce our usage of water, farm land and even cut down co2 emissions.</p>
-        </div>
-        </div>
-      </a>
+          <a class="aboutLink" href="environment.html">
+            <div class="menuText">
+              <img src="images/2.svg">
+              <h4>They’re good for the environment</h4>
+              <p>Utlizing insects would reduce our usage of water, farm land and even cut down co2 emissions.</p>
+              <p class="aboutTextLink">Learn more</p>
+          </div>
+        </a>
+      </div>
     </div>
     <div class="row wow slideUp" data-wow-duration="1s" data-wow-offset="150">
-      <a href="culture.html">
-        <div class="one-half column menuItem">
+      <div class="one-half column menuItem">
+        <a class="aboutLink" href="culture.html">
           <div class="menuText">
             <img src="images/3.svg">
             <h4>Most people eat them</h4>
             <p>80% of the world's nations eat them and are even considered a delicacy among many cultures.</p>
+            <p class="aboutTextLink">Learn more</p>
           </div>
-        </div>
-      </a>
-      <a href="health.html">
-      <div class="one-half column menuItem">
-        <div class="menuText">
-          <img src="images/4.svg">
-          <h4>They're good for your health</h4>
-          <p>Insects are high in protein and packed with nutrients like iron, calcium, vitamin b12, and omega 3 fatty acids.</p>
-        </div>
+        </a>
       </div>
-    </a>
+      <div class="one-half column menuItem">
+        <a class="aboutLink" href="health.html">
+          <div class="menuText">
+            <img src="images/4.svg">
+            <h4>They're good for your health</h4>
+            <p>Insects are high in protein and packed with nutrients like iron, calcium, vitamin b12, and omega 3 fatty acids.</p>
+            <p class="aboutTextLink">Learn more</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -131,7 +138,8 @@
       <div class="six columns">
       <p class="subtitle">KEEP UP</p>
       <form >
-        <input type="text" name="email" value="Email Address">
+        <input type="text" name="email" placeholder="Email Address">
+        <div class="formSubmit"></div>
       </form>
       <p class="sub">To subscribe to our newsletter</p>
       <img class="social" src="images/social_icons.png">

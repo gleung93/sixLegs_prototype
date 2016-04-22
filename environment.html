@@ -38,7 +38,7 @@
 
   <!-- Primary Navigation
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="navigation navLight">
+  <div class="navigation navLight fadeIn">
     <div class="container">
       <a href="index.html">
         <img class="lightLogo" src="images/mark.svg">
@@ -55,17 +55,16 @@
   <div class="allButNav">
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="u-full-width pageTitle blue">
-    <div class="container">
-      <h2>Farming insects requires far fewer natural resources than traditional livestock.</h2>
-    </div>
+  <div class="pageHero envHero heroIntro">
   </div>
-  <div class="u-full-width intro-subtext">
+  <div class="container pageTitle slideDown">
+    <h2>Farming insects requires<br>far fewer natural resources<br>than traditional livestock.</h2>
     <p>As the world population increases the livestock industry puts greater and greater strain on the earth’s natural resources. Farming insects could be the key to alleviating some of this strain.</p>
   </div>
-  <div class="container envCompare">
+
+  <div class="container envCompare wow slideUp" data-wow-duration="1s" data-wow-offset="230">
     <div class="row">
-    <h3>See how insects stack up</h3>
+    <h4>See how insects stack up</h4>
     <div class="toggleBar">
       <div class="toggleItem active" data-content="land">Land area</div>
       <div class="toggleItem middle" data-content="feed">Feed efficency</div>
@@ -73,17 +72,17 @@
     </div>
     <div class="toggleContent">
       <div class="active" ID="land">
-        <h4>13x less farm land</h4>
+        <h3>13x less farm land</h3>
         <p>Due to advancements in vertical farming techniques crickets can be grown inside of multistory buildings. Unlike cows which need many acres or land to graze.</p>
         <img src="images/envLand.png">
       </div>
       <div ID="feed">
-        <h4>5x less feed</h4>
+        <h3>5x less feed</h3>
         <p>Because insects are cold blooded they can more efficiently convert food to body weight. That means eating insects has an environmental impact closer to plants than animals</p>
         <img src="images/envFeed.png">
       </div>
       <div ID="water">
-        <h4>1000x less water</h4>
+        <h3>1000x less water</h3>
         <p>A cow drinks a lot of water in it’s lifetime. Because crickets reach adulthood much quicker they require far less water</p>
         <img src="images/envWater.png">
       </div>
@@ -99,7 +98,8 @@
       <div class="six columns">
       <p class="subtitle">KEEP UP</p>
       <form >
-        <input type="text" name="email" value="Email Address">
+        <input type="text" name="email" placeholder="Email Address">
+        <div class="formSubmit"></div>
       </form>
       <p class="sub">To subscribe to our newsletter</p>
       <img class="social" src="images/social_icons.png">

@@ -28,9 +28,6 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <script src="js/jquery-2.2.1.min.js"></script>
-  <script>
-    $('body').css('display', 'none');
-  </script>
   <script src="js/wow.js"></script>
 
 </head>
@@ -38,7 +35,7 @@
 
   <!-- Primary Navigation
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="navigation navLight">
+  <div class="navigation navLight fadeIn">
     <div class="container">
       <a href="index.html">
         <img class="lightLogo" src="images/mark.svg">
@@ -54,7 +51,6 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="allButNav">
   <div class="pageHero tacoHero heroIntro">
   </div>
   <div class="container pageTitle slideDown">
@@ -62,19 +58,20 @@
     <p>We take familiar foods and put our own insect twist on it. Our menu rotates fequently based on what's in season so sign up for our newsletter or follow us on istagram to keep up with the latest.</p>
   </div>
 
-  <div class="container menuStripe wow slideUp" data-wow-duration="1s" data-wow-offset="250">
+  <div class="container menuStripe wow slideUp" data-wow-duration="1s" data-wow-offset="200">
     <h4>Explore our current offerings</h4>
     <p class="sub">Updated on April 24th</p>
   </div>
 
   <div class="container">
-    <div class="row wow slideUp" data-wow-duration="1s" data-wow-offset="150">
+    <div class="row wow slideUp" data-wow-duration="1s" data-wow-offset="125">
       <a href="mealworm_tacos.html">
         <div class="one-half column menuItem taco">
           <img src="images/taco_menu.jpg">
           <div class="menuText">
             <h4>Mealworm Street Tacos</h4>
             <p>with, cotija cheese, cilantro and onion</p>
+            <p class="menuTextLink">Learn more</p>
           </div>
         </div>
       </a>
@@ -83,15 +80,17 @@
         <div class="menuText">
           <h4>Cricket flour cupcake</h4>
           <p>vanilla base with buttercream frosting</p>
+          <p class="menuTextLink">Learn more</p>
       </div>
       </div>
     </div>
-    <div class="row wow slideUp" data-wow-duration="1s" data-wow-offset="150">
+    <div class="row wow slideUp" data-wow-duration="1s" data-wow-offset="125">
       <div class="one-half column menuItem spider disabled">
         <img src="images/spiderlegs_menu.jpg">
         <div class="menuText">
           <h4>Deep Fried Tarantula Legs</h4>
           <p>Almond oil and garlic batter</p>
+          <p class="menuTextLink">Learn more</p>
       </div>
       </div>
       <div class="one-half column menuItem kabob disabled">
@@ -99,6 +98,7 @@
         <div class="menuText">
           <h4>Grasshoper kabob</h4>
           <p>with onions and peppers</p>
+          <p class="menuTextLink">Learn more</p>
       </div>
       </div>
     </div>
@@ -110,7 +110,8 @@
       <div class="six columns">
       <p class="subtitle">KEEP UP</p>
       <form >
-        <input type="text" name="email" value="Email Address">
+        <input type="text" name="email" placeholder="Email Address">
+        <div class="formSubmit"></div>
       </form>
       <p class="sub">To subscribe to our newsletter</p>
       <img class="social" src="images/social_icons.png">
@@ -146,12 +147,7 @@
   </div>
   <div class="u-full-width copyright">
   </div>
-</div>
 
-  <script>
-    //$('body').fadeIn(750);
-
-  </script>
 <script src="js/app.js"></script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

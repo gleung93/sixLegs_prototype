@@ -1,3 +1,7 @@
+.envHero {
+  background-image: url('../images/farm.jpg');
+}
+
 .pageTitle.blue {
   margin-top: 80px;
   background-color: $darkBlue;
@@ -43,11 +47,12 @@ p.intro-subtext:after {
   margin-top: 40px;
 }
 
-.envCompare h3 {
+.envCompare h4 {
   position: relative;
   text-align: center;
-  color: $red;
+  color: $darkBlue;
   margin-top: 130px;
+  margin-bottom: 0;
 }
 
 .toggleBar {
@@ -56,17 +61,15 @@ p.intro-subtext:after {
   border-radius: 6px;
   margin: 50px 0px 70px 0px;
   white-space: nowrap;
-  box-sizing: border-box;
   overflow: hidden;
 }
 
 .toggleItem {
   position: relative;
   display: inline-block;
-  width: 33.33%;
+  width: 33.333%;
   text-align: center;
   padding: 8px 0px;
-  box-sizing: border-box;
   white-space: nowrap;
   cursor: pointer;
   color: $red;
@@ -111,10 +114,12 @@ p.intro-subtext:after {
   display: none;
 }
 
-.toggleContent div h4 {
+.toggleContent div h3 {
+  text-align: left;
   color: $darkBlue;
   margin-bottom: 10px;
   width: 550px;
+  margin-top: 80px;
 }
 
 .toggleContent div p {

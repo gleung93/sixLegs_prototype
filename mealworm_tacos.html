@@ -28,9 +28,6 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <script src="js/jquery-2.2.1.min.js"></script>
-  <script>
-    $('body').css('display', 'none');
-  </script>
   <script src="js/wow.js"></script>
 
 </head>
@@ -38,7 +35,7 @@
 
   <!-- Primary Navigation
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="navigation navLight">
+  <div class="navigation navLight fadeIn">
     <div class="container">
       <a href="index.html">
         <img class="lightLogo" src="images/mark.svg">
@@ -69,6 +66,11 @@
       </div>
     </div>
     <img class="wow slideInRight" data-wow-duration="2s" data-wow-offset="475" id="tacoPattern" src="images/leftPatternLight.png">
+  </div>
+
+  <div id="arrowDown">
+    <div class="whiteCover wow fadeIn" data-wow-duration=".5s" data-wow-offset="170"></div>
+    <img class="slideFromTopShort delay17" src="images/arrowDown.svg">
   </div>
 
   <div class="container whatTaste">
@@ -121,7 +123,8 @@
       <div class="six columns">
       <p class="subtitle">KEEP UP</p>
       <form >
-        <input type="text" name="email" value="Email Address">
+        <input type="text" name="email" placeholder="Email Address">
+        <div class="formSubmit"></div>
       </form>
       <p class="sub">To subscribe to our newsletter</p>
       <img class="social" src="images/social_icons.png">

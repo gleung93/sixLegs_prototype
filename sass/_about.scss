@@ -1,26 +1,26 @@
 #delicious {
-  @include animation-delay(.5s);
+  @include animation-delay(0s);
   @include animation-duration(1.0s);
   @include animation-fill-mode(both);
   @include animation-timing-function(easeOutQuint);
 }
 
 #nutritious {
-  @include animation-delay(.80s);
+  @include animation-delay(.2s);
   @include animation-duration(1.0s);
   @include animation-fill-mode(both);
   @include animation-timing-function(easeOutQuint);
 }
 
 #sustainable {
-  @include animation-delay(1.10s);
+  @include animation-delay(.4s);
   @include animation-duration(1.0s);
   @include animation-fill-mode(both);
   @include animation-timing-function(easeOutQuint);
 }
 
 #tagline {
-  @include animation-delay(1.7s);
+  @include animation-delay(.6s);
   @include animation-duration(1.5s);
   @include animation-fill-mode(both);
   @include animation-timing-function(easeOutQuint);
@@ -179,6 +179,48 @@
   left: 75px;
 }
 
-.aboutReasons .menuItem.taste:after {
-  content: "Explore our menu";
+.aboutReasons .menuItem:after {
+  content: "";
+}
+
+.aboutLink {
+  display: block;
+  text-decoration: none;
+}
+
+.aboutTextLink {
+  position: relative;
+  display: inline-block;
+  color: $red !important;
+}
+
+.aboutTextLink:after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 5px;
+  height: 14px;
+  width: 14px;
+  margin-top: 2px;
+  background-image: url("../images/arrow_right.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.aboutTextLink:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: $red;
+  opacity: 0;
+  @include transition(all .2s ease-in-out);
+  @include transform(translateY(6px));
+}
+
+.aboutLink:hover .aboutTextLink:before {
+  opacity: 1;
+  @include transform(translateY(0px));
 }

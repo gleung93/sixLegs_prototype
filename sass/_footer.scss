@@ -14,6 +14,7 @@ p.sub {
 
 .footer form {
   margin-bottom: 0;
+  position: relative;
 }
 
 .footer input {
@@ -33,8 +34,28 @@ p.sub {
 }
 
 .footer input:focus {
-  border: none;
+    border: none;
+    border-bottom: 2px solid $red;
+    //color: $Grey;
 }
+
+.footer .formSubmit {
+    position: absolute;
+    content: "";
+    background-image: url("../images/arrow_right_white.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: $red;
+    right: 77px;
+    top: 8px;
+    display: none;
+    @include transition(all .5s ease);
+    cursor: pointer;
+}
+
 
 .footer .info img {
   width: 30px;

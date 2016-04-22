@@ -37,6 +37,20 @@
   }
 }
 
+@include keyframes(fadeColor) {
+  from {
+    color: white;
+  }
+  to {
+    color: initial;
+  }
+}
+
+.fadeColor {
+  @include animation(fadeColor 1.0s easeOutQuint forwards);
+}
+
+
 .fadeOut {
   @include animation(fadeIn 1.0s easeOutQuint forwards);
 }
@@ -189,6 +203,10 @@
 
 .delay25 {
   @include animation-delay(2.5s);
+}
+
+.delay3 {
+  @include animation-delay(3s);
 }
 
 .delay4 {

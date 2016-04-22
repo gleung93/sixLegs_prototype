@@ -5,6 +5,9 @@
   left: 0;
   width: 100%;
   height: 80px;
+  @include animation-duration(0.5s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
 }
 .navigation.home {
   @include animation-duration(1s);
@@ -63,6 +66,7 @@
 }
 
 .navigation li a:hover::after,
+.navigation li a.active:after,
 .navigation li a:focus::after {
 	height: 5px;
 	opacity: 1;
