@@ -1916,9 +1916,8 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after, .tacoIntro .intro-subt
 .natural {
   position: relative;
   padding: 50px 0 150px 0;
-  background-color: #BF401F;
-  color: #F0E6BF;
-  margin-bottom: 100px;
+  background-color: #3B6566;
+  color: white;
   margin-top: 100px; }
 
 #cave {
@@ -1931,7 +1930,7 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after, .tacoIntro .intro-subt
   position: absolute;
   left: 230px;
   bottom: -90px;
-  background-color: #F0E6BF;
+  background-color: white;
   color: black;
   padding: 10px 15px;
   font-size: 15px; }
