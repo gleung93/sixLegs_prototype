@@ -79,6 +79,8 @@
 .events {
   padding: 100px 0;
   position: relative;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .events h3 {
@@ -87,8 +89,8 @@
 
 .truckVector {
   position: absolute;
-  right: -40%;
-  top: 30px;
+  right: -6%;
+  top: 90px;
 }
 
 .info h5, .info img {

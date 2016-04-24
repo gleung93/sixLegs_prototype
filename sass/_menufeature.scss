@@ -49,6 +49,9 @@
 
 .tacoIntro .numberReviews {
   float: left;
+  @extend p;
+  line-height: 26px;
+  color: $darkBlue;
 }
 
 .whatTaste {

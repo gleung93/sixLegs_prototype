@@ -104,17 +104,22 @@
 
 .answer {
   display: none;
-  padding: 25px 95px;
+  padding: 25px 95px 35px 95px;
   text-align: left;
   max-width: 750px;
 }
 
 .answer p {
-  margin-bottom: 15px;
+  margin-top: 23px;
+  margin-bottom: 10px;
+}
+
+.answer p:first-of-type {
+  margin-top: 0px;
 }
 
 .answer a {
-
+  //margin-top: 7px;
 }
 
 .question.active .Q, .question.active .faqTitle {

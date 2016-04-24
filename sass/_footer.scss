@@ -65,4 +65,11 @@ p.sub {
 .copyright {
   height: 50px;
   background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+.copyright p {
+  line-height: 50px;
+  font-weight: 300;
 }

@@ -15,7 +15,7 @@ $(this).keypress(function (e) {
 
 function timerIncrement() {
     idleTime = idleTime + 1;
-    if (idleTime > 5) {
+    if (idleTime > 10) {
         window.location = "index.html";
     }
 }

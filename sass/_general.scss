@@ -30,6 +30,11 @@ a.text:hover:before {
   @include transform(translateY(0px));
 }
 
+a.text.disabled:hover:before {
+  opacity: 1;
+  @include transform(translateY(-11px));
+}
+
 a.text:after {
   content: "";
   position: absolute;
@@ -41,6 +46,10 @@ a.text:after {
   background-image: url("../images/arrow_right.png");
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+a.text.inline:after {
+  display: none;
 }
 
 a.button {
@@ -143,7 +152,7 @@ a.buttonNoWhite {
 }
 
 .disabled {
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
 
 .whiteCover {
@@ -180,4 +189,56 @@ a.buttonNoWhite {
 
 .notScrolled {
   //opacity: 1 !important;
+}
+
+.nextNav {
+  text-align: right;
+  color: white;
+  background-color: $red;
+  height: 80px
+}
+
+.nextNav img {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.nextNav h5 {
+  float: right;
+  line-height: 80px;
+  font-weight: 300;
+  position: relative;
+  color: white;
+}
+
+.nextNav h5:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 24px;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  opacity: 0;
+  @include transition(all .2s ease-in-out);
+  @include transform(translateY(6px));
+}
+
+.nextNav h5:hover:before {
+  opacity: 1;
+  @include transform(translateY(0px));
+}
+
+.nextNav h5:after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 32px;
+  height: 14px;
+  width: 14px;
+  margin-top: 2px;
+  background-image: url("../images/arrow_right_white.png");
+  background-position: center center;
+  background-repeat: no-repeat;
 }

@@ -500,13 +500,13 @@ h5.body {
   font-weight: 500;
   font-size: 20px; }
 
-p, .photoCaption {
+p, .photoCaption, .tacoIntro .numberReviews {
   font-family: museoSans, sans-serif;
   font-weight: 300;
   font-size: 18px;
   line-height: 23px; }
 
-p.sub, .marker:after, .sub.photoCaption {
+p.sub, .marker:after, .sub.photoCaption, .tacoIntro .sub.numberReviews {
   font-family: museoSans, sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -550,6 +550,14 @@ a.text:hover:before {
   -o-transform: translateY(0px);
   transform: translateY(0px); }
 
+a.text.disabled:hover:before {
+  opacity: 1;
+  -webkit-transform: translateY(-11px);
+  -moz-transform: translateY(-11px);
+  -ms-transform: translateY(-11px);
+  -o-transform: translateY(-11px);
+  transform: translateY(-11px); }
+
 a.text:after {
   content: "";
   position: absolute;
@@ -561,6 +569,9 @@ a.text:after {
   background-image: url("../images/arrow_right.png");
   background-position: center center;
   background-repeat: no-repeat; }
+
+a.text.inline:after {
+  display: none; }
 
 a.button {
   position: relative;
@@ -679,7 +690,7 @@ a.button.ghost:hover:after {
   visibility: hidden; }
 
 .disabled {
-  cursor: not-allowed; }
+  cursor: not-allowed !important; }
 
 .whiteCover {
   position: absolute;
@@ -716,15 +727,71 @@ a.button.ghost:hover:after {
   animation-timing-function: easeOutQuint;
   z-index: 1; }
 
+.nextNav {
+  text-align: right;
+  color: white;
+  background-color: #BF401F;
+  height: 80px; }
+
+.nextNav img {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px; }
+
+.nextNav h5 {
+  float: right;
+  line-height: 80px;
+  font-weight: 300;
+  position: relative;
+  color: white; }
+
+.nextNav h5:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 24px;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: translateY(6px);
+  -moz-transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  -o-transform: translateY(6px);
+  transform: translateY(6px); }
+
+.nextNav h5:hover:before {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px); }
+
+.nextNav h5:after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 32px;
+  height: 14px;
+  width: 14px;
+  margin-top: 2px;
+  background-image: url("../images/arrow_right_white.png");
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 .footer {
   background-color: #F8F8F8;
   padding: 75px 0; }
 
-p.subtitle, .subtitle.photoCaption {
+p.subtitle, .subtitle.photoCaption, .tacoIntro .subtitle.numberReviews {
   color: #3B6566;
   font-weight: 700; }
 
-p.sub, .marker:after, .sub.photoCaption {
+p.sub, .marker:after, .sub.photoCaption, .tacoIntro .sub.numberReviews {
   color: #737373; }
 
 .footer form {
@@ -779,7 +846,13 @@ p.sub, .marker:after, .sub.photoCaption {
 
 .copyright {
   height: 50px;
-  background-color: black; }
+  background-color: black;
+  color: white;
+  overflow: hidden; }
+
+.copyright p, .copyright .photoCaption, .copyright .tacoIntro .numberReviews, .tacoIntro .copyright .numberReviews {
+  line-height: 50px;
+  font-weight: 300; }
 
 .navigation {
   z-index: 99;
@@ -969,7 +1042,7 @@ p.sub, .marker:after, .sub.photoCaption {
 .photoText .text h2 {
   color: #3B6566; }
 
-.photoText .text p, .photoText .text .photoCaption {
+.photoText .text p, .photoText .text .photoCaption, .photoText .text .tacoIntro .numberReviews, .tacoIntro .photoText .text .numberReviews {
   max-width: 525px; }
 
 .faq {
@@ -1002,7 +1075,7 @@ p.sub, .marker:after, .sub.photoCaption {
   bottom: -30px;
   color: #6CB6BC; }
 
-.faq p, .faq .photoCaption {
+.faq p, .faq .photoCaption, .faq .tacoIntro .numberReviews, .tacoIntro .faq .numberReviews {
   margin-bottom: 8px; }
 
 .pageHero {
@@ -1039,7 +1112,7 @@ p.sub, .marker:after, .sub.photoCaption {
 .pageTitle h2 {
   color: #BF401F; }
 
-.pageTitle p, .pageTitle .photoCaption {
+.pageTitle p, .pageTitle .photoCaption, .pageTitle .tacoIntro .numberReviews, .tacoIntro .pageTitle .numberReviews {
   max-width: 600px; }
 
 .menuStripe {
@@ -1082,7 +1155,7 @@ p.sub, .marker:after, .sub.photoCaption {
 .menuItem img {
   display: block;
   width: 220px;
-  height: auto;
+  height: 220px;
   margin: 0 auto; }
 
 .menuText {
@@ -1096,15 +1169,9 @@ p.sub, .marker:after, .sub.photoCaption {
   color: #BF401F;
   margin-bottom: 0; }
 
-.menuItem p, .menuItem .photoCaption {
+.menuItem p, .menuItem .photoCaption, .menuItem .tacoIntro .numberReviews, .tacoIntro .menuItem .numberReviews {
   color: black;
   margin-bottom: 12px; }
-
-.menuItem.spider img {
-  margin-top: 40px; }
-
-.menuItem.cupcake img {
-  width: 200px; }
 
 .menuTextLink {
   position: relative;
@@ -1150,14 +1217,10 @@ p.sub, .marker:after, .sub.photoCaption {
   transform: translateY(0px); }
 
 .map-container {
-  position: fixed;
-  top: -120px;
-  left: 525px;
-  right: 0;
-  bottom: 0;
-  height: calc(100vh + 120px);
+  margin-top: 70px;
+  height: 450px;
   background-color: #E9E5DB;
-  z-index: 97;
+  z-index: 99;
   -webkit-animation-duration: 1.5s;
   -moz-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -1166,22 +1229,8 @@ p.sub, .marker:after, .sub.photoCaption {
   animation-fill-mode: both;
   -webkit-animation-timing-function: easeOutQuint;
   -moz-animation-timing-function: easeOutQuint;
-  animation-timing-function: easeOutQuint; }
-
-.place-card {
-  display: none; }
-
-.panel {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #F8F8F8;
-  background-image: url("../images/leftPanel.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  z-index: 98;
-  width: 525px; }
+  animation-timing-function: easeOutQuint;
+  z-index: 98; }
 
 #OTR {
   display: none; }
@@ -1226,7 +1275,9 @@ p.sub, .marker:after, .sub.photoCaption {
 
 .schedule .active h4,
 .schedule .active p.time,
-.schedule .active .time.photoCaption {
+.schedule .active .time.photoCaption,
+.schedule .active .tacoIntro .time.numberReviews,
+.tacoIntro .schedule .active .time.numberReviews {
   color: #3B6566; }
 
 .schedule h4:after {
@@ -1272,15 +1323,17 @@ p.sub, .marker:after, .sub.photoCaption {
 
 .events {
   padding: 100px 0;
-  position: relative; }
+  position: relative;
+  overflow: hidden;
+  z-index: -1; }
 
 .events h3, .events .footer input, .footer .events input {
   color: #3B6566; }
 
 .truckVector {
   position: absolute;
-  right: -40%;
-  top: 30px; }
+  right: -6%;
+  top: 90px; }
 
 .info h5, .info img {
   float: left; }
@@ -1310,7 +1363,7 @@ p.sub, .marker:after, .sub.photoCaption {
   background-color: #F8F8F8;
   padding: 50px; }
 
-.intro-subtext p, .intro-subtext .photoCaption {
+.intro-subtext p, .intro-subtext .photoCaption, .intro-subtext .tacoIntro .numberReviews, .tacoIntro .intro-subtext .numberReviews {
   display: block;
   position: relative;
   margin: 0px auto 0px auto;
@@ -1321,7 +1374,7 @@ p.sub, .marker:after, .sub.photoCaption {
   color: #3B6566;
   width: 900px; }
 
-p.intro-subtext:after, .intro-subtext.photoCaption:after {
+p.intro-subtext:after, .intro-subtext.photoCaption:after, .tacoIntro .intro-subtext.numberReviews:after {
   content: "";
   display: block;
   background-color: #BF401F;
@@ -1400,7 +1453,7 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   width: 550px;
   margin-top: 80px; }
 
-.toggleContent div p, .toggleContent div .photoCaption {
+.toggleContent div p, .toggleContent div .photoCaption, .toggleContent div .tacoIntro .numberReviews, .tacoIntro .toggleContent div .numberReviews {
   width: 550px;
   margin-bottom: 80px; }
 
@@ -1488,7 +1541,7 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   left: -43px;
   bottom: 14px; }
 
-.pageTitle.about p, .pageTitle.about .photoCaption {
+.pageTitle.about p, .pageTitle.about .photoCaption, .pageTitle.about .tacoIntro .numberReviews, .tacoIntro .pageTitle.about .numberReviews {
   display: block;
   margin: 60px auto 30px auto;
   text-align: center;
@@ -1498,7 +1551,7 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   color: #737373;
   max-width: 650px; }
 
-.pageTitle.about p em, .pageTitle.about .photoCaption em {
+.pageTitle.about p em, .pageTitle.about .photoCaption em, .pageTitle.about .tacoIntro .numberReviews em, .tacoIntro .pageTitle.about .numberReviews em {
   font-style: normal;
   font-weight: 500; }
 
@@ -1557,7 +1610,7 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   -moz-animation-delay: 0.5s;
   animation-delay: 0.5s; }
 
-.aboutStripe p, .aboutStripe .photoCaption {
+.aboutStripe p, .aboutStripe .photoCaption, .aboutStripe .tacoIntro .numberReviews, .tacoIntro .aboutStripe .numberReviews {
   font-weight: 100; }
 
 .aboutReasons h2 {
@@ -1583,7 +1636,8 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   position: absolute;
   left: 15px;
   top: 15px;
-  width: 40px; }
+  width: 40px;
+  height: auto; }
 
 .aboutReasons .menuItem:after {
   text-align: left;
@@ -1659,7 +1713,7 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   width: 750px;
   margin: 0 auto; }
 
-.discoverStripe p, .discoverStripe .photoCaption {
+.discoverStripe p, .discoverStripe .photoCaption, .discoverStripe .tacoIntro .numberReviews, .tacoIntro .discoverStripe .numberReviews {
   margin: 0; }
 
 .map {
@@ -1679,6 +1733,10 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   border: 4px solid white;
   cursor: pointer; }
 
+.marker.disabled {
+  opacity: .5;
+  cursor: not-allowed; }
+
 .marker:after {
   content: "Locust";
   position: absolute;
@@ -1694,6 +1752,9 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
 
 .marker:hover:after {
   opacity: 1; }
+
+.marker.disabled:hover:after {
+  opacity: 0; }
 
 #israel {
   top: 33%;
@@ -1771,7 +1832,7 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   height: 100%;
   box-sizing: border-box; }
 
-.modal .right p.sub, .modal .right .marker:after, .modal .right .sub.photoCaption {
+.modal .right p.sub, .modal .right .marker:after, .modal .right .sub.photoCaption, .modal .right .tacoIntro .sub.numberReviews, .tacoIntro .modal .right .sub.numberReviews {
   color: #7A0000;
   margin-bottom: 50px; }
 
@@ -1827,7 +1888,7 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
 .alreadyEat h2 {
   color: #BF401F; }
 
-.alreadyEat p, .alreadyEat .photoCaption {
+.alreadyEat p, .alreadyEat .photoCaption, .alreadyEat .tacoIntro .numberReviews, .tacoIntro .alreadyEat .numberReviews {
   max-width: 600px; }
 
 .alreadyEat .item {
@@ -1841,7 +1902,7 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   margin-bottom: 30px;
   height: 150px; }
 
-.alreadyEat .item p, .alreadyEat .item .photoCaption {
+.alreadyEat .item p, .alreadyEat .item .photoCaption, .alreadyEat .item .tacoIntro .numberReviews, .tacoIntro .alreadyEat .item .numberReviews {
   margin-bottom: 10px; }
 
 #fragments {
@@ -1856,7 +1917,9 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   position: relative;
   padding: 50px 0 150px 0;
   background-color: #BF401F;
-  color: #F0E6BF; }
+  color: #F0E6BF;
+  margin-bottom: 100px;
+  margin-top: 100px; }
 
 #cave {
   position: absolute;
@@ -1920,7 +1983,9 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   margin-right: 15px; }
 
 .tacoIntro .numberReviews {
-  float: left; }
+  float: left;
+  line-height: 26px;
+  color: #3B6566; }
 
 .whatTaste {
   margin-bottom: 80px; }
@@ -2096,12 +2161,16 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
 
 .answer {
   display: none;
-  padding: 25px 95px;
+  padding: 25px 95px 35px 95px;
   text-align: left;
   max-width: 750px; }
 
-.answer p, .answer .photoCaption {
-  margin-bottom: 15px; }
+.answer p, .answer .photoCaption, .answer .tacoIntro .numberReviews, .tacoIntro .answer .numberReviews {
+  margin-top: 23px;
+  margin-bottom: 10px; }
+
+.answer p:first-of-type, .answer .photoCaption:first-of-type, .answer .tacoIntro .numberReviews:first-of-type, .tacoIntro .answer .numberReviews:first-of-type {
+  margin-top: 0px; }
 
 .question.active .Q, .question.active .faqTitle {
   background-color: #BF401F;
@@ -2117,7 +2186,7 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   -o-transform: translateX(0);
   transform: translateX(0); }
 
-.faqMore p, .faqMore .photoCaption {
+.faqMore p, .faqMore .photoCaption, .faqMore .tacoIntro .numberReviews, .tacoIntro .faqMore .numberReviews {
   margin-bottom: 10px; }
 
 .faqMore {
@@ -2143,7 +2212,7 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
   left: 0;
   top: 0; }
 
-.aminoAcid p, .aminoAcid .photoCaption {
+.aminoAcid p, .aminoAcid .photoCaption, .aminoAcid .tacoIntro .numberReviews, .tacoIntro .aminoAcid .numberReviews {
   padding-left: 70px;
   line-height: 50px; }
 
@@ -2160,9 +2229,13 @@ p.intro-subtext:after, .intro-subtext.photoCaption:after {
 
 .healthOmega {
   margin-top: 120px;
-  margin-bottom: 200px; }
+  margin-bottom: 150px; }
 
 .healthOmega h3, .healthOmega .footer input, .footer .healthOmega input {
   color: #3B6566; }
+
+.healthOmega h5 {
+  color: #3B6566;
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=app.css.map */

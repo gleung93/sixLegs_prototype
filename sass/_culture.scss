@@ -47,6 +47,11 @@
   cursor: pointer;
 }
 
+.marker.disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
 .marker:after {
   content: "Locust";
   position: absolute;
@@ -62,6 +67,10 @@
 
 .marker:hover:after {
   opacity: 1;
+}
+
+.marker.disabled:hover:after {
+  opacity: 0;
 }
 
 #israel {
@@ -239,6 +248,8 @@
   padding: 50px 0 150px 0;
   background-color: $red;
   color: $cream;
+  margin-bottom: 100px;
+  margin-top: 100px;
 }
 
 .natural h2 {
